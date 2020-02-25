@@ -1,155 +1,86 @@
 # sales_credit_note
 
-Id
-created_at
-updated_at
-number
-code
-applied_at
-archived
-credit_term
-customer_id
-customer_rep_id
-approved_by_billing_user_id
-approved_by_office_user_id
-void_sales_credit_note_id
-replacement_sales_credit_note_id
-pdf_url
-xml_url
-xml_validation_url
-currency
-exchange_rate
-service_sub_total_taxed
-service_sub_total_exempt
-service_sub_total_exonerated
-product_sub_total_taxed
-product_sub_total_exempt
-product_sub_total_exonerated
-sub_total_taxed
-sub_total_exempt
-sub_total_exonerated
-sub_total
-discount_total
-sub_total_net
-tax_total
-tax_exception_json
-tax_exoneration_json
-tax_total_returned
-total
-total_pending_payment
-public_notes
-private_notes
-payment_form
-payment_status
+created for customers when they return products or require financial discounts. Also used to "void" sales invoices that were reject by tax authority.
+
+There are threee kinds of Sales Credit Notes
+
+1. Financial Credit Notes: This credit notes are created manually, only the total amount field is neccesary.
+2. Returns
+3. Credit Notes to Void an Invoice
+
+- Trigger
+  - don't allow total_pending_payment below 0
+
+on_update trigger
+
+- validate that approved_by_billing_user_id and approved_by_office_user_id are set.
+
+on archived=true
+
+- set applied_at, status, total_pending_payment
+- if financial credit_note then set fields accordingly. [TODO:complete field details]
+- create sales_credit_note_item for each entry in items
 
 # sales_credit_note_item:
 
-id
-product_id
-price
-amount
-discount_rate
-product_tax_id
+Used for history and calculations
 
 # sales_debit_note:
 
-Id
-created_at
-updated_at
-number
-code
-applied_at
-credit_term
-customer_id
-customer_rep_id
-approved_by_billing_user_id
-approved_by_office_user_id
-void_sales_debit_note_id
-replacement_sales_debit_note_id
-pdf_url
-xml_url
-xml_validation_url
-currency
-exchange_rate
-service_sub_total_taxed
-service_sub_total_exempt
-service_sub_total_exonerated
-product_sub_total_taxed
-product_sub_total_exempt
-product_sub_total_exonerated
-sub_total_taxed
-sub_total_exempt
-sub_total_exonerated
-sub_total
-discount_total
-sub_total_net
-tax_total
-tax_exception_json
-tax_exoneration_json
-tax_total_returned  
-total_pending_payment
-public_notes
-private_notes
-payment_form
-payment_status
+Debit notes created for customers they require custom fees.. Also used to "void" sales credit notes that were reject by tax authority.
+
+There are two kinds of Sales Debit Notes
+
+1. Financial Notes: This notes are created manually, only the total amount field is neccesary.
+2. Debit Notes to Void a Credit Note
+
+- Trigger
+  - don't allow total_pending_payment below 0
+
+on_update trigger
+
+- validate that approved_by_billing_user_id and approved_by_office_user_id are set.
+
+on archived=true
+
+- set applied_at, status, total_pending_payment
+- if financial debit_note then set fields accordingly. [TODO:complete field details]
+- create sales_debit_note_item for each entry in items
 
 # sales_debit_note_item:
 
-Id
-product_id
-price
-amount
-discount_rate
-product_tax_id
+Used for history and calculations
 
 # sales_payment:
 
-Id
-number
-external_id
-customer_id
-created_at
-updated_at
-applied_at
-received_at
-archived
-status
-customer_rep_id
-created_by_user_id
-confirmed_by_user_id
-deposited_in_bank_id
+Sales payments are created for cash, credit card, bank transfers and check payments.
+
+- Trigger
+  - don't allow sales_payment_item.total below 0
+
+on archived=true
+
+- set applied_at, status
+- update total_pending_amount for each entry in items json.
+- create sales_payment_item for each entry in items
 
 # sales_payment_item:
 
-id
-sales_payment_id
-sales_invoice_id
-sales_credit_note_id
-sales_debit_note_id
-total
+Used for history and calculations
 
 # sales_payment_reversal:
 
-Id
-number
-external_id
-customer_id
-created_at
-updated_at
-applied_at
-received_at
-archived
-status
-customer_rep_id
-created_by_user_id
-confirmed_by_user_id
-sourced_from_bank_id
+Created to reverse and incorrect payment.
+
+- Trigger
+  - don't allow sales_payment_reserval_item.total below 0
+
+on archived=true
+
+- set applied_at, status
+- update total_pending_amount for each entry in items json.
+- create sales_payment_reserval_item for each entry in items
 
 # sales_payment_reserval_item:
 
-id
-sales_payment_reversal_id
-sales_invoice_id
-sales_credit_note_id
-sales_debit_note_id
-total
+Used for history and calculations

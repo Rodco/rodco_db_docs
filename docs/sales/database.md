@@ -1,3 +1,12 @@
+#### electronic_document_log
+
+* id
+* document_id
+* type
+* code
+* status
+* response
+
 #### product_price_list:
 
 * id
