@@ -1,7 +1,4 @@
 # product:
-
-Trigger:
-
 Id
 created_at
 updated_at
@@ -16,25 +13,19 @@ product_tax_id
 description
 image_url
 comision_rate
-
-# product_brand:
-
+product_brand:
 id
 name
-
-# product_type:
-
+product_type:
 id
 name
-
-# product_type_category:
-
+product_type_category:
 id
 name
 product_type_id
 
-# packing_list:
 
+# packing_list:
 id
 sales_invoce_id
 type
@@ -49,55 +40,35 @@ status
 archived
 
 # packing_list_item:
-
 id
 packing_list_id
 product_id
 amount
 
-# product_warehouse:
 
+# product_warehouse:
 id
 name
 description
 
 # product_warehouse_item:
-
-- Trigger
-  inventory can't be below cero
-
-- Data
-  id
-  product_warehouse_id
-  product_id
-  inventory
+id
+product_warehouse_id
+product_id
+inventory
 
 # product_warehouse_transfer:
+on archived =true
+create a product_warehouse_transfer_item for each entry in items
 
-id
-created_at
-applied_at
-status
-archived
-approved_by_user_id
-created_by_user_id
-reason_for_transfer
-destination_warehouse_id
-source_warehouse_id
 
 # product_warehouse_transfer_item:
-
-- Trigger
-  amount can't be below cero
-
-- Data
-  Id
-  product_warehouse_transfer_id
-  product_id
-  amount
+Id
+product_warehouse_transfer_id
+product_id
+amount
 
 # truck:
-
 id
 name
 license_plate
@@ -105,7 +76,6 @@ brand
 model
 
 # shipping_route:
-
 Id
 shipped_at
 returned_at
@@ -114,4 +84,4 @@ total_km
 driver_user_id
 assistant_user_id
 status
-archived
+archived 
