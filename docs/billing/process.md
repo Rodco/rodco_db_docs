@@ -1,6 +1,6 @@
 # sales_credit_note
 
-Credit notes created for customers when they return products or require financial discounts. Also used to "void" sales invoices that were reject by tax authority.
+created for customers when they return products or require financial discounts. Also used to "void" sales invoices that were reject by tax authority.
 
 There are threee kinds of Sales Credit Notes
 
