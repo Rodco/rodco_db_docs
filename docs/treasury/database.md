@@ -47,6 +47,7 @@
 * archived
 * status
 * applied_at
+* is_supplier_invoice
 
 #### Expense_credit_note:
 Credit note created by supplier

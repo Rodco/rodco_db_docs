@@ -130,3 +130,9 @@
 * tax
 * supplier_invoice_id
 
+#### supplier_invoice_item_received
+
+* id
+* product_id
+* amount
+* supplier_invoice_id
