@@ -1,10 +1,12 @@
-Bank:
+# Bank:
+
 id
 name
 description
 balance
 
-Bank_transfer:
+# Bank_transfer:
+
 id
 source_bank_id
 destination_bank_id
@@ -13,15 +15,16 @@ currency
 exchange_rate
 reason
 
-Bank_transfer_item:
+# Bank_transfer_item:
+
 id
 bank_transfer_id
 sales_payment_item_id
 sales_payment_reversal_item_id
 amount
 
+# purchase_order:
 
-purchase_order:
 id
 created_at
 updated_at
@@ -38,7 +41,9 @@ ordered_by_user_id
 Items
 description
 
-Expense_credit_note:
+
+# Expense_credit_note:
+
 Credit note created by supplier
 Id
 Number
@@ -79,7 +84,8 @@ total
 total_pending_payment
 payment_status
 
-Expense_debit_note:
+# Expense_debit_note:
+
 Debit note created by supplier
 Id
 Number
@@ -120,10 +126,11 @@ total
 Total_pending_payment
 payment_status
 
-expense_invoce:
+# expense_invoce:
+
 id
 Number
-code 
+code
 external_id ?
 supplier_id
 created_at
@@ -137,7 +144,7 @@ invoice_pdf
 invoice_xml
 invoice_xml_response
 eletronic_invoice_response
-purchase_order_id 
+purchase_order_id
 invoice_items (json)
 currency
 exchange_rate
@@ -161,10 +168,11 @@ total
 total_pending_payment
 is_credit
 reference_document
-regulation 
-payment_status 
+regulation
+payment_status
 
-expense_payment:
+# expense_payment:
+
 Id
 number
 external_id
@@ -179,14 +187,18 @@ reference
 Approved_payment_at
 archived
 Status
-expense_payment_item:
+
+# expense_payment_item:
+
 Id
 expense_payment_id
 expense_invoice_id
 expense_credit_note_id
 expense_debit_note_id
 total
-expense_payment_reversal:
+
+# expense_payment_reversal:
+
 Id
 number
 external_id
@@ -197,18 +209,22 @@ applied_at
 received_at
 archived
 status
-expense_payment_reversal_item:
+
+# expense_payment_reversal_item:
+
 Id
 expense_payment_reversal_id
 expense_invoice_id
 expense_credit_note_id
 expense_debit_note_id
 total
-expense_ticket_invoce:
+
+# expense_ticket_invoce:
+
 id
 Number
-code 
-external_id 
+code
+external_id
 supplier_id
 created_at
 updated_at
@@ -221,7 +237,7 @@ invoice_pdf
 invoice_xml
 invoice_xml_response
 eletronic_invoice_response
-purchase_order_id 
+purchase_order_id
 invoice_items (json)
 currency
 exchange_rate
@@ -245,9 +261,10 @@ total
 total_pending_payment
 is_credit
 reference_document
-regulation 
+regulation
 
-supplier_payment:
+# supplier_payment:
+
 id
 approved_payment_date
 number
@@ -260,7 +277,8 @@ received_at
 archived
 status
 
-supplier_payment_item:
+# supplier_payment_item:
+
 Id
 supplier_payment_id
 supplier_invoice_id
@@ -268,7 +286,8 @@ supplier_credit_note_id
 supplier_debit_note_id
 total
 
-supplier_payment_reversal:
+# supplier_payment_reversal:
+
 id
 approved_payment_date
 number
@@ -281,7 +300,8 @@ received_at
 archived
 status
 
-supplier_payment_reversal_id:
+# supplier_payment_reversal_id:
+
 Id
 supplier_payment_id
 supplier_invoice_id

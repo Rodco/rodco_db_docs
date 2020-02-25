@@ -1,8 +1,5 @@
+# supplier:
 
-
-
-
-supplier:
 id
 name
 identification
@@ -18,7 +15,8 @@ credit_term
 credit_limit
 is_shipping_supplier
 
-supplier_credit_note:
+# supplier_credit_note:
+
 Id
 created_at
 updated_at
@@ -49,7 +47,8 @@ status
 archived
 payment_status
 
-suppler_debit_note:
+# suppler_debit_note:
+
 id
 created_at
 updated_at
@@ -80,7 +79,8 @@ status
 archived
 payment_status
 
-supplier_invoice:
+# supplier_invoice:
+
 id
 created_at
 updated_at
@@ -114,7 +114,8 @@ total
 total_pending_payment
 payment_status
 
-supplier_invoice_item:
+# supplier_invoice_item:
+
 id
 product_id
 amount
@@ -122,4 +123,3 @@ price
 discount
 tax
 supplier_invoice_id
-
