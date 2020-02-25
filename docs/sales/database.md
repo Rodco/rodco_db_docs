@@ -1,141 +1,141 @@
-# product_price_list:
+#### product_price_list:
 
-id
-name
-markup
-discount
+* id
+* name
+* markup
+* discount
 
-# product_price_list_item:
+#### product_price_list_item:
 
-id
-product_id
-markup
-price_type
-product_price_list_id
-discount
+* id
+* product_id
+* markup
+* price_type
+* product_price_list_id
+* discount
 
-# quote:
+#### quote:
 
-id
-created_at
-updated_at
-applied_at
-customer_id
-shipping_supplier_id
-status
-customer_rep_id
-customer_order_number
-credit_term
-currency
-exchange_rate
-shipping_date
-quote_items_json
-tax_exception_json
-tax_exoneration_json
-order_id
-customer_override_type
-customer_override_identification
-customer_override_email_for_invoce
-order_total
-requires_office_approval
-approved_by_office_user_id
-approved_by_office_at
-description
-origin
+* id
+* created_at
+* updated_at
+* applied_at
+* customer_id
+* shipping_supplier_id
+* status
+* customer_rep_id
+* customer_order_number
+* credit_term
+* currency
+* exchange_rate
+* shipping_date
+* quote_items_json
+* tax_exception_json
+* tax_exoneration_json
+* order_id
+* customer_override_type
+* customer_override_identification
+* customer_override_email_for_invoce
+* order_total
+* requires_office_approval
+* approved_by_office_user_id
+* approved_by_office_at
+* description
+* origin
 
-# order:
+#### order:
 
-id
-created_at
-updated_at
-applied_at
-customer_id
-shipping_supplier_id
-status
-customer_rep_id
-customer_order_number
-approved_by_billing_user_id
-approved_by_billing_at
-approved_by_billing_status
-credit_term
-currency
-exchange_rate
-shipping_date
-order_items_json
-tax_exception_json
-tax_exoneration_json
-sales_invoce_id
-quote_id
-customer_override_type
-customer_override_identification
-customer_override_email_for_invoce
-order_total
-requires_office_approval
-approved_by_office_user_id
-approved_by_office_at
-approved_by_office_status
-replaces_sales_invoce_id
-description
-origin
+* id
+* created_at
+* updated_at
+* applied_at
+* customer_id
+* shipping_supplier_id
+* status
+* customer_rep_id
+* customer_order_number
+* approved_by_billing_user_id
+* approved_by_billing_at
+* approved_by_billing_status
+* credit_term
+* currency
+* exchange_rate
+* shipping_date
+* order_items_json
+* tax_exception_json
+* tax_exoneration_json
+* sales_invoce_id
+* quote_id
+* customer_override_type
+* customer_override_identification
+* customer_override_email_for_invoce
+* order_total
+* requires_office_approval
+* approved_by_office_user_id
+* approved_by_office_at
+* approved_by_office_status
+* replaces_sales_invoce_id
+* description
+* origin
 
-# sales_invoce:
+#### sales_invoce:
 
-id
-created_at
-updated_at
-number
-code
-applied_at
-credit_term
-order_id
-customer_id
-shipping_supplier_id
-shipping_tracking_number
-customer_rep_id
-approved_by_billing_user_id
-approved_by_office_user_id
-void_sales_invoce_id
-replacement_sales_invoce_id
-pdf_url
-xml_url
-xml_validation_url
-currency
-exchange_rate
-service_sub_total_taxed
-Service_sub_total_exempt
-service_sub_total_exonerated
-product_sub_total_taxed
-Product_sub_total_exempt
-product_sub_total_exonerated
-sub_total_taxed
-Sub_total_exempt
-sub_total_exonerated
-sub_total
-Discount_total
-sub_total_net
-tax_total
-tax_exception_json
-tax_exoneration_json
-Tax_total_returned
-total
-total_pending_payment
-public_notes
-private_notes
-payment_form
-payment_status
+* id
+* created_at
+* updated_at
+* number
+* code
+* applied_at
+* credit_term
+* order_id
+* customer_id
+* shipping_supplier_id
+* shipping_tracking_number
+* customer_rep_id
+* approved_by_billing_user_id
+* approved_by_office_user_id
+* void_sales_invoce_id
+* replacement_sales_invoce_id
+* pdf_url
+* xml_url
+* xml_validation_url
+* currency
+* exchange_rate
+* service_sub_total_taxed
+* Service_sub_total_exempt
+* service_sub_total_exonerated
+* product_sub_total_taxed
+* Product_sub_total_exempt
+* product_sub_total_exonerated
+* sub_total_taxed
+* Sub_total_exempt
+* sub_total_exonerated
+* sub_total
+* Discount_total
+* sub_total_net
+* tax_total
+* tax_exception_json
+* tax_exoneration_json
+* Tax_total_returned
+* total
+* total_pending_payment
+* public_notes
+* private_notes
+* payment_form
+* payment_status
 
-# sales_invoce_item:
+#### sales_invoce_item:
 
-Id
-created_at
-updated_at
-sales_invoce_id
-product_id
-product_warehouse_id
-unit_price
-amount
-discount_rate
-product_tax_id
-tax_rate
-product_cost_id
-discount_reason
+* Id
+* created_at
+* updated_at
+* sales_invoce_id
+* product_id
+* product_warehouse_id
+* unit_price
+* amount
+* discount_rate
+* product_tax_id
+* tax_rate
+* product_cost_id
+* discount_reason

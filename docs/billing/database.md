@@ -1,155 +1,155 @@
-# sales_credit_note
+#### sales_credit_note
 
-Id
-created_at
-updated_at
-number
-code
-applied_at
-archived
-credit_term
-customer_id
-customer_rep_id
-approved_by_billing_user_id
-approved_by_office_user_id
-void_sales_credit_note_id
-replacement_sales_credit_note_id
-pdf_url
-xml_url
-xml_validation_url
-currency
-exchange_rate
-service_sub_total_taxed
-service_sub_total_exempt
-service_sub_total_exonerated
-product_sub_total_taxed
-product_sub_total_exempt
-product_sub_total_exonerated
-sub_total_taxed
-sub_total_exempt
-sub_total_exonerated
-sub_total
-discount_total
-sub_total_net
-tax_total
-tax_exception_json
-tax_exoneration_json
-tax_total_returned
-total
-total_pending_payment
-public_notes
-private_notes
-payment_form
-payment_status
+* Id
+* created_at
+* updated_at
+* number
+* code
+* applied_at
+* archived
+* credit_term
+* customer_id
+* customer_rep_id
+* approved_by_billing_user_id
+* approved_by_office_user_id
+* void_sales_credit_note_id
+* replacement_sales_credit_note_id
+* pdf_url
+* xml_url
+* xml_validation_url
+* currency
+* exchange_rate
+* service_sub_total_taxed
+* service_sub_total_exempt
+* service_sub_total_exonerated
+* product_sub_total_taxed
+* product_sub_total_exempt
+* product_sub_total_exonerated
+* sub_total_taxed
+* sub_total_exempt
+* sub_total_exonerated
+* sub_total
+* discount_total
+* sub_total_net
+* tax_total
+* tax_exception_json
+* tax_exoneration_json
+* tax_total_returned
+* total
+* total_pending_payment
+* public_notes
+* private_notes
+* payment_form
+* payment_status
 
-# sales_credit_note_item:
+#### sales_credit_note_item:
 
-id
-product_id
-price
-amount
-discount_rate
-product_tax_id
+* id
+* product_id
+* price
+* amount
+* discount_rate
+* product_tax_id
 
-# sales_debit_note:
+#### sales_debit_note:
 
-Id
-created_at
-updated_at
-number
-code
-applied_at
-credit_term
-customer_id
-customer_rep_id
-approved_by_billing_user_id
-approved_by_office_user_id
-void_sales_debit_note_id
-replacement_sales_debit_note_id
-pdf_url
-xml_url
-xml_validation_url
-currency
-exchange_rate
-service_sub_total_taxed
-service_sub_total_exempt
-service_sub_total_exonerated
-product_sub_total_taxed
-product_sub_total_exempt
-product_sub_total_exonerated
-sub_total_taxed
-sub_total_exempt
-sub_total_exonerated
-sub_total
-discount_total
-sub_total_net
-tax_total
-tax_exception_json
-tax_exoneration_json
-tax_total_returned  
-total_pending_payment
-public_notes
-private_notes
-payment_form
-payment_status
+* Id
+* created_at
+* updated_at
+* number
+* code
+* applied_at
+* credit_term
+* customer_id
+* customer_rep_id
+* approved_by_billing_user_id
+* approved_by_office_user_id
+* void_sales_debit_note_id
+* replacement_sales_debit_note_id
+* pdf_url
+* xml_url
+* xml_validation_url
+* currency
+* exchange_rate
+* service_sub_total_taxed
+* service_sub_total_exempt
+* service_sub_total_exonerated
+* product_sub_total_taxed
+* product_sub_total_exempt
+* product_sub_total_exonerated
+* sub_total_taxed
+* sub_total_exempt
+* sub_total_exonerated
+* sub_total
+* discount_total
+* sub_total_net
+* tax_total
+* tax_exception_json
+* tax_exoneration_json
+* tax_total_returned  
+* total_pending_payment
+* public_notes
+* private_notes
+* payment_form
+* payment_status
 
-# sales_debit_note_item:
+#### sales_debit_note_item:
 
-Id
-product_id
-price
-amount
-discount_rate
-product_tax_id
+* Id
+* product_id
+* price
+* amount
+* discount_rate
+* product_tax_id
 
-# sales_payment:
+#### sales_payment:
 
-Id
-number
-external_id
-customer_id
-created_at
-updated_at
-applied_at
-received_at
-archived
-status
-customer_rep_id
-created_by_user_id
-confirmed_by_user_id
-deposited_in_bank_id
+* Id
+* number
+* external_id
+* customer_id
+* created_at
+* updated_at
+* applied_at
+* received_at
+* archived
+* status
+* customer_rep_id
+* created_by_user_id
+* confirmed_by_user_id
+* deposited_in_bank_id
 
-# sales_payment_item:
+#### sales_payment_item:
 
-id
-sales_payment_id
-sales_invoice_id
-sales_credit_note_id
-sales_debit_note_id
-total
+* id
+* sales_payment_id
+* sales_invoice_id
+* sales_credit_note_id
+* sales_debit_note_id
+* total
 
-# sales_payment_reversal:
+#### sales_payment_reversal:
 
-Id
-number
-external_id
-customer_id
-created_at
-updated_at
-applied_at
-received_at
-archived
-status
-customer_rep_id
-created_by_user_id
-confirmed_by_user_id
-sourced_from_bank_id
+* Id
+* number
+* external_id
+* customer_id
+* created_at
+* updated_at
+* applied_at
+* received_at
+* archived
+* status
+* customer_rep_id
+* created_by_user_id
+* confirmed_by_user_id
+* sourced_from_bank_id
 
-# sales_payment_reserval_item:
+#### sales_payment_reserval_item:
 
-id
-sales_payment_reversal_id
-sales_invoice_id
-sales_credit_note_id
-sales_debit_note_id
-total
+* id
+* sales_payment_reversal_id
+* sales_invoice_id
+* sales_credit_note_id
+* sales_debit_note_id
+* total
