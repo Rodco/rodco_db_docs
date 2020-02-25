@@ -175,7 +175,9 @@ Debit note created by supplier
 * is_credit
 * reference_document
 * regulation 
-* payment_status 
+* payment_status
+* schedule_at
+* expires_at 
 
 #### expense_payment:
 

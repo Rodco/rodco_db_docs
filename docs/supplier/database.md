@@ -45,6 +45,8 @@
 * archived
 * payment_status
 * items_json
+* code
+* number
 
 #### suppler_debit_note:
 * id
@@ -77,6 +79,8 @@
 * archived
 * payment_status
 * items_json
+* code
+* number
 
 #### supplier_invoice:
 * id
@@ -112,6 +116,10 @@
 * total_pending_payment
 * payment_status
 * items_json
+* code
+* number
+* schedule_at
+* expires_at
 
 #### supplier_invoice_item:
 * id
