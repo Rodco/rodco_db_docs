@@ -1,7 +1,6 @@
 # supplier:
 
 Table
-id
 name
 country
 phone
@@ -21,7 +20,6 @@ applied_at
 currency
 total
 total_pending_payment
-
 status
 archived
 payment_status

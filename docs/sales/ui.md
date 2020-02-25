@@ -1,10 +1,14 @@
 # electronic_document_log
 
-id
+Table
 document_id
 type
 code
 status
+
+Actions
+Retry
+Void
 
 # product_price_list:
 
@@ -17,12 +21,26 @@ discount
 
 # product_price_list_item:
 
-id
-product_id
+Table
+product_id [name, brand, category, type]
 markup
 price_type
 product_price_list_id
 discount
+
+Actions
+Delete
+Create
+
+# product_price_list_customer
+
+Table
+product_price_list
+customer_id
+
+Actions
+Create
+Delete
 
 # quote:
 

@@ -23,13 +23,11 @@ Should display dropdown accordion with packing_list_item under each packing_list
 
 Actions
 Print
-Receive
-should display popup with canvas to capture signature
+    Print selected packing list and items
 Add to Shipping Route
-popup to select from active shiping routes
+    popup to select from active shiping routes
 
 # packing_list_item:
-
 Use for historic purposes
 
 # product_warehouse:
@@ -41,7 +39,6 @@ Table should include accordion drop down with
 
 Table
 Filterable by product_warehouse_id and product's [product_brand_id, product_type_category_id, product_type_id]
-id
 product_warehouse_id
 product_id
 inventory
@@ -50,6 +47,7 @@ inventory
 
 Table
 Should display dropdown accordion with product_warehouse_transfer_item under each transfer
+
 Actions
 Approve
 Sets archived=true and approved_by_user_id
