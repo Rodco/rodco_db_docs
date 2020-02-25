@@ -14,6 +14,10 @@
 * currency
 * exchange_rate
 * reason
+* archived
+* status
+* approved_by_user_id
+* applied_at
 
 #### Bank_transfer_item:
 
@@ -32,7 +36,6 @@
 * supplier_id
 * ordered_at
 * approved_by_user_id
-* approved_at
 * total
 * credit_term
 * quote_url
@@ -41,6 +44,9 @@
 * ordered_by_user_id
 * Items
 * description
+* archived
+* status
+* applied_at
 
 #### Expense_credit_note:
 Credit note created by supplier

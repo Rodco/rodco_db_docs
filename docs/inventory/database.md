@@ -60,6 +60,7 @@ Trigger:
 * id
 * name
 * description
+* items_json
 
 #### product_warehouse_item:
 

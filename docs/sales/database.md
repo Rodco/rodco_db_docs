@@ -132,7 +132,7 @@
 * private_notes
 * payment_form
 * payment_status
-* items
+* items_json
 
 #### sales_invoce_item:
 

@@ -41,7 +41,7 @@
 * private_notes
 * payment_form
 * payment_status
-* items
+* items_json
 
 #### sales_credit_note_item:
 
@@ -93,7 +93,7 @@
 * private_notes
 * payment_form
 * payment_status
-* items
+* items_json
 
 #### sales_debit_note_item:
 
@@ -120,7 +120,7 @@
 * created_by_user_id
 * confirmed_by_user_id
 * deposited_in_bank_id
-* items
+* items_json
 
 #### sales_payment_item:
 
@@ -147,7 +147,7 @@
 * created_by_user_id
 * confirmed_by_user_id
 * sourced_from_bank_id
-* items
+* items_json
 
 #### sales_payment_reserval_item:
 
