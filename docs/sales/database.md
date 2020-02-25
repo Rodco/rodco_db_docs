@@ -132,6 +132,7 @@
 * private_notes
 * payment_form
 * payment_status
+* items
 
 #### sales_invoce_item:
 

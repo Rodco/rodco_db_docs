@@ -44,6 +44,7 @@
 * status
 * archived
 * payment_status
+* items
 
 #### suppler_debit_note:
 * id
@@ -75,6 +76,7 @@
 * status
 * archived
 * payment_status
+* items
 
 #### supplier_invoice:
 * id
@@ -109,6 +111,7 @@
 * total
 * total_pending_payment
 * payment_status
+* items
 
 #### supplier_invoice_item:
 * id
