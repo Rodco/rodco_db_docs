@@ -148,6 +148,7 @@
 * confirmed_by_user_id
 * sourced_from_bank_id
 * items_json
+* total
 
 #### sales_payment_reserval_item:
 

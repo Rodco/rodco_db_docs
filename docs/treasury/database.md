@@ -217,6 +217,7 @@ Debit note created by supplier
 * received_at
 * archived
 * status
+* total
 
 #### expense_payment_reversal_item:
 
@@ -307,6 +308,7 @@ Debit note created by supplier
 * received_at
 * archived
 * status
+* total
 
 #### supplier_payment_reversal_id:
 
