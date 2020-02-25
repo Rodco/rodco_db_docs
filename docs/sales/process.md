@@ -1,11 +1,32 @@
 # electronic_document_log
 
-id
-document_id
-type
-code
-status
-response
+Created by the serverless system.
+There are no updates, deletes or creates.
+
+- Actions
+  - void
+    - check that the status is rejected
+    - create a document that reverts the selected document
+
+# sales_invoce:
+
+Sales Invoices are created by the serverless system.
+There are no updates, deletes or creates.
+
+- Trigger
+    - don't allow total_pending_payment below 0
+
+- Actions
+  - resend
+    re-send invoice to customers email
+  - return
+    - check that amount_returned <= to amount
+    - create sales_credit_note with sales_credit_note_items
+
+# sales_invoce_item:
+
+Sales Invoices are created by the serverless system.
+There are no updates, deletes or creates.
 
 # product_price_list:
 
@@ -54,6 +75,8 @@ origin
 
 # order:
 
+Order
+
 id
 created_at
 updated_at
@@ -86,65 +109,3 @@ approved_by_office_status
 replaces_sales_invoce_id
 description
 origin
-
-# sales_invoce:
-
-id
-created_at
-updated_at
-number
-code
-applied_at
-credit_term
-order_id
-customer_id
-shipping_supplier_id
-shipping_tracking_number
-customer_rep_id
-approved_by_billing_user_id
-approved_by_office_user_id
-void_sales_invoce_id
-replacement_sales_invoce_id
-pdf_url
-xml_url
-xml_validation_url
-currency
-exchange_rate
-service_sub_total_taxed
-Service_sub_total_exempt
-service_sub_total_exonerated
-product_sub_total_taxed
-Product_sub_total_exempt
-product_sub_total_exonerated
-sub_total_taxed
-Sub_total_exempt
-sub_total_exonerated
-sub_total
-Discount_total
-sub_total_net
-tax_total
-tax_exception_json
-tax_exoneration_json
-Tax_total_returned
-total
-total_pending_payment
-public_notes
-private_notes
-payment_form
-payment_status
-
-# sales_invoce_item:
-
-Id
-created_at
-updated_at
-sales_invoce_id
-product_id
-product_warehouse_id
-unit_price
-amount
-discount_rate
-product_tax_id
-tax_rate
-product_cost_id
-discount_reason
