@@ -149,3 +149,4 @@
 * tax_rate
 * product_cost_id
 * discount_reason
+* amount_return
