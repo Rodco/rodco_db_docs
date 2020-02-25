@@ -1,4 +1,5 @@
-user:
-name
-id
-email
+#### user:
+
+* name
+* id
+* email
