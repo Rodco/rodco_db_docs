@@ -111,6 +111,7 @@
 * payment_status
 * items_json
 * api_source
+* total
 
 #### sales_debit_note_item:
 
@@ -123,10 +124,6 @@
 - api_source
 
 #### sales_payment:
-
-- Trigger
-
-  - don't allow sales_payment_item.total below 0
 
 - Id
 - number
@@ -144,6 +141,7 @@
 - deposited_in_bank_id
 - items_json
 - api_source
+- total
 
 #### sales_payment_item:
 
