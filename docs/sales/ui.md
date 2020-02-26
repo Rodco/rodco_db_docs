@@ -12,30 +12,30 @@ Void
 
 # product_price_list:
 
-Guessable CRUD
-
-id
+Table
 name
 markup
 discount
+number_of_custom_prices [ from view? or trigger if not possible ]
 
 # product_price_list_item:
 
 Table
 product_id [name, brand, category, type]
 markup
-price_type
 product_price_list_id
 discount
 
 Actions
 Delete
 Create
+Update Bulk
+Optional [Should show a modal to set the markup and discount for all selected prices]
 
 # product_price_list_customer
 
 Table
-product_price_list
+product_price_list_id
 customer_id
 
 Actions
@@ -78,9 +78,45 @@ Sales_Invoice_Items should have checkboxes or numeric inputs used to insert the 
 
 # Order
 
-- Actions
+- Table:
+  _ created_at
+  _ updated*at
+  * applied*at
+  * customer*id
+  * shipping*supplier_id
+  * status
+  _ customer_rep_id
+  _ customer*order_number
+  * approved_by_billing_user_id
+  * approved_by_billing_at
+  * approved_by_billing_status
+  * credit*term
+  * currency
+  _ exchange_rate
+  _ shipping*date
+  * order*items_json
+  * tax*exception_json
+  * tax*exoneration_json
+  * sales*invoce_id
+  * quote*id
+  * customer*override_type
+  * customer*override_identification
+  * customer*override_email_for_invoce
+  * order*total
+  * requires_office_approval
+  * approved_by_office_user_id
+  * approved_by_office_at
+  * approved_by_office_status
+  * replaces*sales_invoce_id
+  * description \*
+  origin
+
+* Actions
 
   - Approve
-    - send order id to order/approve
+    - if requires_office_approval 
+    - must have approved_by_billing_user_id
+    - archived=true must have approved_by_office_user_id
+
   - Duplicate
     - send order id to order/duplicate

@@ -4,7 +4,6 @@
   - Approve
     - set archived=true
   - Delete
-    - use delete end point
 
 # Debit Note
 
@@ -12,7 +11,6 @@
   - Approve
     - set archived=true
   - Delete
-    - use delete end point
 
 # Sales_payment
 
@@ -20,7 +18,6 @@
   - Apply
     - set archived=true
   - Delete
-    - use delete end point
 
 # sales_payment_reversal
 
@@ -31,4 +28,14 @@
     - set archived=true
 
     - Delete
-      - use delete end point
+
+* order approvals ( order )
+
+- Actions:
+
+* Hold
+  - set approved_by_billing_status = hold
+* Approve
+  - set approved_by_billing_status= approved
+  - set approved_by_billing_user_id
+  - set approved_by_billing_at

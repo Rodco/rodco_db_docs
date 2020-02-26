@@ -26,6 +26,8 @@ Print
     Print selected packing list and items
 Add to Shipping Route
     popup to select from active shiping routes
+    update field shipping_route
+    set status=shipped
 
 # packing_list_item:
 Use for historic purposes

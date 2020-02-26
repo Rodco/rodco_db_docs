@@ -1,190 +1,83 @@
 # Bank:
 
-Table
-Guessable CRUD
-
 # Bank_transfer:
 
-Table: Display drop down accordion with Bank_transfer_item's
-Actions
-Approve
-
-# Bank_transfer_item:
-
-Table: Standard with releted fields
+on approve
+transfer balance between items
 
 # purchase_order:
 
-Actions
-Approve
+on approve
+if it's supply invoice, creare supply invoice, supply invoiceitems and receive_items
+otherwise just maked as archived
 
 # Expense_credit_note:
 
-Table
-Number
-supplier_id
-created_at
-applied_at
-archived
-status
-Invoice_pdf
-Invoice_items (json)
-currency
-total
-total_pending_payment
-payment_status
+on approve
+check that it has all required files (pdf,xml and xml response)
+check permissions and set archived=true and applied_at
 
 # Expense_debit_note:
 
-Table
-
-Number
-supplier_id
-created_at
-Applied_at
-archived
-status
-Invoice_pdf
-Invoice_items (json)
-currency
-total
-Total_pending_payment
-payment_status
-
-Actions
+on approve
+check that it has all required files (pdf,xml and xml response)
+check permissions and set archived=true and applied_at
 
 # expense_invoce:
 
-Table
-
-Number
-supplier_id
-created_at
-applied_at
-status
-invoice_date
-invoice_pdf
-invoice_xml
-purchase_order_id
-invoice_items (json)
-currency
-total
-total_pending_payment
-is_credit
-payment_status
-
-Show invoice_items (json) on dropdown accordion
-
-Actions
+on approve
+check that it has all required files (pdf,xml and xml response)
+check permissions and set archived=true and applied_at
 
 # expense_payment:
 
-Table
-Supplier_id
-currency
-Applied_at
-reference
-archived
-Status
+on approve
+for each item, modify pending_total
+set archived=true and applied_at
 
-Show expense_payment_item on dropdown accordion
-
-Actions
-Revert
-Approve
+on revert
+check that payment is archived
+create a expense_payment_reversal from current payment
+for each item, modify pending_total
+set archived=true and applied_at
 
 # expense_payment_item:
 
-table
-
-expense_payment_id
-expense_invoice_id
-expense_credit_note_id
-expense_debit_note_id
-total
-
 # expense_payment_reversal:
 
-Table
-supplier_id
-created_at
-applied_at
-archived
-status
-
-Actions
-Approve
+on approve
+for each item, modify pending_total
+set archived=true and applied_at
 
 # expense_payment_reversal_item:
 
-Table
-
-expense_payment_reversal_id
-expense_invoice_id
-expense_credit_note_id
-expense_debit_note_id
-total
-
 # expense_ticket_invoce:
 
-Table
-
-Number
-supplier_id
-created_at
-applied_at
-received_at
-archived
-status
-invoice_date
-eletronic_invoice_response
-currency
-total
-total_pending_payment
-is_credit
-reference_document
-regulation
-
-Show invoice_items (json) in dropdown accordion
+on approve
+check that it has all required files (pdf,xml and xml response)
+check permissions and set archived=true and applied_at
 
 # supplier_payment:
+on approve
+check that it's approved to be paid at such date
+reduce pending_total from each item in supplier_payment_item
+set archived=true and applied_at
 
-id
-approved_payment_date
-number
-external_id
-supplier_id
-created_at
-updated_at
-applied_at
-received_at
-archived
-status
+on reverse
+check that it's approved to be paid at such date
+reduce pending_total from each item in supplier_payment_item
+set archived=true and applied_at
 
 # supplier_payment_item:
 
-Id
-supplier_payment_id
-supplier_invoice_id
-supplier_credit_note_id
-supplier_debit_note_id
-total
-
 # supplier_payment_reversal:
 
-id
-approved_payment_date
-number
-external_id
-supplier_id
-created_at
-updated_at
-applied_at
-received_at
-archived
-status
+on approve
+check that it's approved to be paid at such date
+reduce pending_total from each item in supplier_payment_item
+set archived=true and applied_at
 
-# supplier_payment_reversal_id:
+# supplier_payment_reversal_item:
 
 Id
 supplier_payment_id
