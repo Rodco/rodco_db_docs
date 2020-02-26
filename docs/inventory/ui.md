@@ -14,6 +14,8 @@
   Dropdown collapse with inventory details
   Note: Will try to create view that show total calculated inventory
 
+  There must be a way to batch edit a single field of several products at once. [discount]
+
   - actions
     - create
     - deactivate
@@ -72,7 +74,7 @@ Table
   - Print
     Print selected packing list and items
   - Add to Shipping Route
-    popup to select from active shiping routes
+    popup to select from active shipping routes
     update field shipping_route
     set status=shipped
   - deliver
