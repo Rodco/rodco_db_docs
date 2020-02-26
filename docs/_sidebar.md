@@ -5,19 +5,15 @@
 
 * Architecture
 
+  - [backend](/backend/backend.md)
   - [ui](/architecture/ui.md)
+  - [priceLists](/architecture/priceLists.md)
+  - [productOrganization](/architecture/productOrganization.md)
 
 * Model
 
   - Accounting
     - [data model](/accounting/database.md)
-
-  * Managment
-
-    - [data model](/managment/database.md)
-    - [process](/managment/process.md)
-    - [permissions](/managment/permissions.md)
-    - [ui](/managment/ui.md)
 
   * Billing
     - [data model](/billing/database.md)
@@ -26,6 +22,9 @@
     - [ui](/billing/ui.md)
   * Customer
     - [data model](/customer/database.md)
+    - [process](/customer/process.md)
+    - [permissions](/customer/permissions.md)
+    - [ui](/customer/ui.md)
   * Inventory
     - [data model](/inventory/database.md)
     - [process](/inventory/process.md)
@@ -49,8 +48,15 @@
     - [permissions](/treasury/permissions.md)
     - [ui](/treasury/ui.md)
 
-* UI Components
-  - [Product Price Selector](/accounting/database.md)
-  - [Product Quantity Selector](/accounting/database.md)
-  - [Sales Invoice Selector](/a)
-  - [Sales Invoice Selector](/a)
+* Managment
+
+  - [data model](/managment/database.md)
+  - [process](/managment/process.md)
+  - [permissions](/managment/permissions.md)
+  - [ui](/managment/ui.md)
+
+- UI Components
+  - [Product Price Selector](/components/productPriceSelector.md)
+  - [Product Quantity Selector](/components/productAmountSelector.md)
+  - [Sales Invoice Selector](/components/salesInvoicePaymentSelector)
+  - [Supplier Invoice Selector](/components/supplyInvoicePaymentSelector)

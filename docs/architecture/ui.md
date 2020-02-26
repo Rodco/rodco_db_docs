@@ -5,6 +5,7 @@ Important Features
 Graphql subscriptions to update list on backend changes
 No object with archived=true can be updated or deleted
 Easily adjustable layouts, forms, tables, filters, actions ( react-admin Docs patterns )
+A notification components is importante to subscribe to async_notifications and show new notifications for user
 I18n
 
 
