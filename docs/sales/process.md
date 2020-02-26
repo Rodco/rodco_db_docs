@@ -14,7 +14,8 @@ Sales Invoices are created by the serverless system.
 There are no updates, deletes or creates.
 
 - Trigger
-    - don't allow total_pending_payment below 0
+
+  - don't allow total_pending_payment below 0
 
 - Actions
   - resend
@@ -43,6 +44,11 @@ markup
 price_type
 product_price_list_id
 discount
+
+# product_price_list_customer
+
+    * on update
+        update customer.price_lists
 
 # quote:
 
