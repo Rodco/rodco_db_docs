@@ -68,7 +68,6 @@ Trigger:
 - id
 - name
 - description
-- items_json
 - api_source
 
 # product_warehouse_item:
