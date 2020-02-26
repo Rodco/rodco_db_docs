@@ -42,6 +42,7 @@
 * payment_form
 * payment_status
 * items_json
+* api_source
 
 #### sales_credit_note_item:
 
@@ -51,6 +52,7 @@
 * amount
 * discount_rate
 * product_tax_id
+* api_source
 
 #### sales_debit_note:
 
@@ -94,6 +96,7 @@
 * payment_form
 * payment_status
 * items_json
+* api_source
 
 #### sales_debit_note_item:
 
@@ -103,6 +106,7 @@
 * amount
 * discount_rate
 * product_tax_id
+* api_source
 
 #### sales_payment:
 
@@ -121,6 +125,7 @@
 * confirmed_by_user_id
 * deposited_in_bank_id
 * items_json
+* api_source
 
 #### sales_payment_item:
 
@@ -130,6 +135,7 @@
 * sales_credit_note_id
 * sales_debit_note_id
 * total
+* api_source
 
 #### sales_payment_reversal:
 
@@ -149,6 +155,7 @@
 * sourced_from_bank_id
 * items_json
 * total
+* api_source
 
 #### sales_payment_reserval_item:
 
@@ -158,3 +165,4 @@
 * sales_credit_note_id
 * sales_debit_note_id
 * total
+* api_source

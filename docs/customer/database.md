@@ -27,18 +27,22 @@ Retail and Wholesale customers
 * shipping_supplier_id
 * billing_week_day
 * tags
+* price_lists
+* api_source
 
 #### Customer_segment:
 
 Groups customers by segment
 * id
 * name
+* api_source
 
 #### Customer_region:
 
 Groups customers by comercial region
 * id
 * name
+* api_source
 
 #### Customer_rep:
 
@@ -47,9 +51,11 @@ Representative that gets assign to customer
 * Name
 * User_id
 * Phone_number
+* api_source
 
 #### Parent_corporation:
 
 Use in customers that belong to a larger commercial group and must be counted as a whole.
 * id
 * name
+* api_source

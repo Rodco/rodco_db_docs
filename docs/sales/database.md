@@ -6,6 +6,7 @@
 * code
 * status
 * response
+* api_source
 
 #### product_price_list:
 
@@ -13,6 +14,7 @@
 * name
 * markup
 * discount
+* api_source
 
 #### product_price_list_item:
 
@@ -22,6 +24,7 @@
 * price_type
 * product_price_list_id
 * discount
+* api_source
 
 #### quote:
 
@@ -51,6 +54,7 @@
 * approved_by_office_at
 * description
 * origin
+* api_source
 
 #### order:
 
@@ -86,6 +90,8 @@
 * replaces_sales_invoce_id
 * description
 * origin
+* archived
+* api_source
 
 #### sales_invoce:
 
@@ -133,6 +139,7 @@
 * payment_form
 * payment_status
 * items_json
+* api_source
 
 #### sales_invoce_item:
 
@@ -150,3 +157,4 @@
 * product_cost_id
 * discount_reason
 * amount_return
+* api_source

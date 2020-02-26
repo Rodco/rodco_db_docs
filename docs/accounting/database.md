@@ -8,6 +8,7 @@ Consecutive Numbers for linear documents. Updated in transactions via update +1.
 * billing_payment
 * billing_payment_reversal
 * incomes_invoce
+* api_source
 
 #### product_cost:
 * id 
@@ -15,13 +16,15 @@ Consecutive Numbers for linear documents. Updated in transactions via update +1.
 * cost
 * product_id
 * initial_inventory
-* supplier_invoice_id
+* supplier_invoice_item_id
 * previous_cost
 * active
 * used_in_price_lists
+* api_source
 
 #### product_tax:
 * id
 * rate
 * name
 * code
+* api_source

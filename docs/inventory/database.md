@@ -16,22 +16,27 @@ Trigger:
 * description
 * image_url
 * comision_rate
+* product_cost_as_price_id
+* api_source
 
 #### product_brand:
 
 * id
 * name
+* api_source
 
 #### product_type:
 
 * id
 * name
+* api_source
 
 #### product_type_category:
 
 * id
 * name
 * product_type_id
+* api_source
 
 #### packing_list:
 
@@ -47,6 +52,8 @@ Trigger:
 * received_by_signature
 * status
 * archived
+* api_source
+* shipment_cost
 
 #### packing_list_item:
 
@@ -54,6 +61,7 @@ Trigger:
 * packing_list_id
 * product_id
 * amount
+* api_source
 
 #### product_warehouse:
 
@@ -61,6 +69,7 @@ Trigger:
 * name
 * description
 * items_json
+* api_source
 
 #### product_warehouse_item:
 
@@ -72,6 +81,7 @@ Trigger:
   * product_warehouse_id
   * product_id
   * inventory
+  * api_source
 
 #### product_warehouse_transfer:
 
@@ -85,6 +95,7 @@ Trigger:
 * reason_for_transfer
 * destination_warehouse_id
 * source_warehouse_id
+* api_source
 
 #### product_warehouse_transfer_item:
 
@@ -96,6 +107,7 @@ Trigger:
   * product_warehouse_transfer_id
   * product_id
   * amount
+  * api_source
 
 #### truck:
 
@@ -104,6 +116,7 @@ Trigger:
 * license_plate
 * brand
 * model
+* api_source
 
 #### shipping_route:
 
@@ -116,3 +129,12 @@ Trigger:
 * assistant_user_id
 * status
 * archived
+* api_source
+
+#### product_price_list_customer
+
+* id
+* product_price_list_id
+* customer_id
+* created_at
+* api_source

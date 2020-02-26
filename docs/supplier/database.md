@@ -13,6 +13,7 @@
 * credit_term
 * credit_limit
 * is_shipping_supplier
+* api_source
 
 #### supplier_credit_note:
 * Id
@@ -47,6 +48,7 @@
 * items_json
 * code
 * number
+* api_source
 
 #### suppler_debit_note:
 * id
@@ -81,6 +83,7 @@
 * items_json
 * code
 * number
+* api_source
 
 #### supplier_invoice:
 * id
@@ -120,6 +123,7 @@
 * number
 * schedule_at
 * expires_at
+* api_source
 
 #### supplier_invoice_item:
 * id
@@ -129,6 +133,7 @@
 * discount
 * tax
 * supplier_invoice_id
+* api_source
 
 #### supplier_invoice_item_received
 
@@ -136,3 +141,4 @@
 * product_id
 * amount
 * supplier_invoice_id
+* api_source
