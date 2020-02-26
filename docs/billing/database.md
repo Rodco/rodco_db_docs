@@ -97,6 +97,7 @@
 * payment_status
 * items_json
 * api_source
+* total
 
 #### sales_debit_note_item:
 
@@ -126,6 +127,7 @@
 * deposited_in_bank_id
 * items_json
 * api_source
+* total
 
 #### sales_payment_item:
 

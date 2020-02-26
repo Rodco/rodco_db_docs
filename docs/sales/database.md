@@ -74,7 +74,7 @@
 * currency
 * exchange_rate
 * shipping_date
-* order_items_json
+* items_json
 * tax_exception_json
 * tax_exoneration_json
 * sales_invoce_id
