@@ -4,6 +4,7 @@
 - name
 - description
 - balance
+- api_source
 
 #### Bank_transfer:
 
@@ -18,6 +19,7 @@
 - status
 - approved_by_user_id
 - applied_at
+- api_source
 
 #### Bank_transfer_item:
 
@@ -26,6 +28,7 @@
 - sales_payment_item_id
 - sales_payment_reversal_item_id
 - amount
+- api_source
 
 #### purchase_order:
 
@@ -47,6 +50,7 @@
 - status
 - applied_at
 - is_supplier_invoice
+- api_source
 
 #### Expense_credit_note:
 
@@ -90,6 +94,7 @@ Credit note created by supplier
 - total
 - total_pending_payment
 - payment_status
+- api_source
 
 #### Expense_debit_note:
 
@@ -133,12 +138,13 @@ Debit note created by supplier
 - total
 - Total_pending_payment
 - payment_status
+- api_source
 
 #### expense_invoce:
 
 - id
 - Number
-- code
+- code 
 - external_id ?
 - supplier_id
 - created_at
@@ -152,7 +158,7 @@ Debit note created by supplier
 - invoice_xml
 - invoice_xml_response
 - eletronic_invoice_response
-- purchase_order_id
+- purchase_order_id 
 - invoice_items (json)
 - currency
 - exchange_rate
@@ -176,66 +182,18 @@ Debit note created by supplier
 - total_pending_payment
 - is_credit
 - reference_document
-- regulation
+- regulation 
 - payment_status
 - schedule_at
-- expires_at
-
-#### expense_payment:
-
-- Id
-- number
-- external_id
-- Supplier_id
-- currency
-- exchange_rate
-- created_at
-- updated_at
-- Applied_at
-- Received_at
-- reference
-- Approved_payment_at
-- archived
-- Status
-
-#### expense_payment_item:
-
-- Id
-- expense_payment_id
-- expense_invoice_id
-- expense_credit_note_id
-- expense_debit_note_id
-- total
-
-#### expense_payment_reversal:
-
-- Id
-- number
-- external_id
-- supplier_id
-- created_at
-- updated_at
-- applied_at
-- received_at
-- archived
-- status
-- total
-
-#### expense_payment_reversal_item:
-
-- Id
-- expense_payment_reversal_id
-- expense_invoice_id
-- expense_credit_note_id
-- expense_debit_note_id
-- total
+- expires_at 
+- api_source
 
 #### expense_ticket_invoce:
 
 - id
 - Number
-- code
-- external_id
+- code 
+- external_id 
 - supplier_id
 - created_at
 - updated_at
@@ -248,7 +206,7 @@ Debit note created by supplier
 - invoice_xml
 - invoice_xml_response
 - eletronic_invoice_response
-- purchase_order_id
+- purchase_order_id 
 - invoice_items (json)
 - currency
 - exchange_rate
@@ -272,7 +230,8 @@ Debit note created by supplier
 - total_pending_payment
 - is_credit
 - reference_document
-- regulation
+- regulation 
+- api_source
 
 #### supplier_payment:
 
@@ -287,6 +246,7 @@ Debit note created by supplier
 - received_at
 - archived
 - status
+- api_source
 
 #### supplier_payment_item:
 
@@ -296,6 +256,10 @@ Debit note created by supplier
 - supplier_credit_note_id
 - supplier_debit_note_id
 - total
+- expense_invoice_id
+- expense_credit_note_id
+- expense_debit_note_id
+- api_source
 
 #### supplier_payment_reversal:
 
@@ -311,8 +275,9 @@ Debit note created by supplier
 - archived
 - status
 - total
+- api_source
 
-#### supplier_payment_reversal_id:
+#### supplier_payment_reversal_item:
 
 - Id
 - supplier_payment_id
@@ -320,3 +285,7 @@ Debit note created by supplier
 - supplier_credit_note_id
 - supplier_debit_note_id
 - total
+- expense_invoice_id
+- expense_credit_note_id
+- expense_debit_note_id
+- api_source

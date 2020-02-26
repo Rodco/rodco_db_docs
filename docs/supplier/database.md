@@ -1,5 +1,4 @@
 #### supplier:
-
 - id
 - name
 - identification
@@ -14,9 +13,9 @@
 - credit_term
 - credit_limit
 - is_shipping_supplier
+- api_source
 
 #### supplier_credit_note:
-
 - Id
 - created_at
 - updated_at
@@ -49,9 +48,9 @@
 - items_json
 - code
 - number
+- api_source
 
 #### suppler_debit_note:
-
 - id
 - created_at
 - updated_at
@@ -84,9 +83,9 @@
 - items_json
 - code
 - number
+- api_source
 
 #### supplier_invoice:
-
 - id
 - created_at
 - updated_at
@@ -124,9 +123,9 @@
 - number
 - schedule_at
 - expires_at
+- api_source
 
 #### supplier_invoice_item:
-
 - id
 - product_id
 - amount
@@ -134,6 +133,7 @@
 - discount
 - tax
 - supplier_invoice_id
+- api_source
 
 #### supplier_invoice_item_received
 
@@ -141,3 +141,4 @@
 - product_id
 - amount
 - supplier_invoice_id
+- api_source

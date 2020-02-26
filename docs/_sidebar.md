@@ -12,6 +12,13 @@
   - Accounting
     - [data model](/accounting/database.md)
 
+  * Managment
+
+    - [data model](/managment/database.md)
+    - [process](/managment/process.md)
+    - [permissions](/managment/permissions.md)
+    - [ui](/managment/ui.md)
+
   * Billing
     - [data model](/billing/database.md)
     - [process](/billing/process.md)
