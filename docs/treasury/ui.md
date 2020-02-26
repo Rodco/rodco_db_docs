@@ -1,19 +1,60 @@
 # Bank:
 
 Table
-Guessable CRUD
+
+- id
+- name
+- description
+- balance
+- api_source
+
+Actions
+Create
 
 # Bank_transfer:
 
-Table: Display drop down accordion with Bank_transfer_item's
+Table:
+
+- source_bank_id
+- destination_bank_id
+- amount
+- currency
+- reason
+- status
+- approved_by_user_id
+- applied_at
+
+Display drop down accordion with Bank_transfer_item's
 Actions
 Approve
 
 # Bank_transfer_item:
 
-Table: Standard with releted fields
+Table:
+
+- id
+- bank_transfer_id
+- sales_payment_item_id
+- sales_payment_reversal_item_id
+- amount
 
 # purchase_order:
+
+Table
+
+- created_at
+- supplier_id
+- ordered_at
+- approved_by_user_id
+- total
+- credit_term
+- quote_url
+- expires_at
+- ordered_by_user_id
+- description
+- status
+- applied_at
+- is_supplier_invoice
 
 Actions
 Approve ( as supplier or expense )
@@ -33,6 +74,8 @@ total
 total_pending_payment
 payment_status
 
+Show details in droppdown accordion
+
 # Expense_debit_note:
 
 Table
@@ -44,11 +87,12 @@ invoice_date
 archived
 status
 Invoice_pdf
-Invoice_items (json)
 currency
 total
 Total_pending_payment
 payment_status
+
+Show details in droppdown accordion
 
 # expense_invoce:
 
@@ -186,7 +230,7 @@ Show supplier_payment_reversal_id on dropdown accordion
 Actions
 Approve
 
-# supplier_payment_reversal_id:
+# supplier_payment_reversal_item:
 
 Table
 supplier_payment_id

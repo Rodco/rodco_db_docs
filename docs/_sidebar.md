@@ -4,8 +4,21 @@
   - [Getting Started](/accounting/database.md)
 
 * Architecture
+
+  - [ui](/architecture/ui.md)
+
+* Model
+
   - Accounting
     - [data model](/accounting/database.md)
+
+  * Managment
+
+    - [data model](/managment/database.md)
+    - [process](/managment/process.md)
+    - [permissions](/managment/permissions.md)
+    - [ui](/managment/ui.md)
+
   * Billing
     - [data model](/billing/database.md)
     - [process](/billing/process.md)
@@ -35,3 +48,9 @@
     - [process](/treasury/process.md)
     - [permissions](/treasury/permissions.md)
     - [ui](/treasury/ui.md)
+
+* UI Components
+  - [Product Price Selector](/accounting/database.md)
+  - [Product Quantity Selector](/accounting/database.md)
+  - [Sales Invoice Selector](/a)
+  - [Sales Invoice Selector](/a)

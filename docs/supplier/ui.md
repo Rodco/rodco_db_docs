@@ -9,6 +9,9 @@ credit_term
 credit_limit
 is_shipping_supplier
 
+Actions
+create
+
 # supplier_credit_note:
 
 Table
@@ -25,6 +28,7 @@ archived
 payment_status
 
 Actions
+Create
 Approve
 
 # suppler_debit_note:
@@ -44,6 +48,7 @@ archived
 payment_status
 
 Actions
+Create
 Approve
 
 # supplier_invoice:
@@ -67,8 +72,8 @@ payment_status
 dropdown with accordion to show supplier_invoice_item's and supplier_invoice_item_received
 
 Actions
+Create
 Approve
-Receive
 
 # supplier_invoice_item:
 
