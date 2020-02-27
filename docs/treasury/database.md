@@ -92,7 +92,7 @@ Credit note created by supplier
 - tax_exoneration_json
 - Tax_total_returned
 - total
-- total_pending_payment
+- balance
 - payment_status
 - api_source
 
@@ -136,7 +136,7 @@ Debit note created by supplier
 - tax_exoneration_json
 - Tax_total_returned
 - total
-- Total_pending_payment
+- balance
 - payment_status
 - api_source
 
@@ -179,7 +179,7 @@ Debit note created by supplier
 - tax_exoneration_json
 - tax_total_returned
 - total
-- total_pending_payment
+- balance
 - is_credit
 - reference_document
 - regulation 
@@ -227,7 +227,7 @@ Debit note created by supplier
 - tax_exoneration_json
 - tax_total_returned
 - total
-- total_pending_payment
+- balance
 - is_credit
 - reference_document
 - regulation 

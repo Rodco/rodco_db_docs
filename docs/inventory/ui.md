@@ -171,7 +171,7 @@ product_warehouse_id [R,F,U]
 archived
 currency [R,F] {\$,EU,C/}
 total [R,F]
-total_pending_payment [R,F]
+balance [R,F]
 payment_status [R,F]
 
 dropdown with accordion to show supplier_invoice_item's and supplier_invoice_item_received

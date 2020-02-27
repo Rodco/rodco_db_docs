@@ -1,10 +1,10 @@
 # electronic_document_log
 
 Table
-document_id
-type
-code
-status
+document_id [R,F]
+type [R,F]
+code [R,F]
+status [R,F] {printed, registered, validated, notified}
 
 Actions
 Retry
@@ -13,9 +13,8 @@ Void
 # product_price_list:
 
 Table
-name
-markup
-discount
+name [R,F,C*]
+markup [R,F,C*]
 number_of_custom_prices [ from view? or trigger if not possible ]
 
 - Actions
@@ -24,10 +23,9 @@ number_of_custom_prices [ from view? or trigger if not possible ]
 # product_price_list_item:
 
 Table
-product_id [name, brand, category, type]
-markup
-product_price_list_id
-discount
+product_id [name, brand, category, type][r,f,c*]
+markup [R,F,C*]
+product_price_list_id [R,F,C*]
 
 - Actions
   - Delete
@@ -41,17 +39,17 @@ Table
 created_at
 updated_at
 applied_at
-customer_id
+customer_id [R,F,C*]
 status
 customer_rep_id
-customer_order_number
-credit_term
-currency
-shipping_date
-quote_items_json
-order_total
-requires_office_approval
-description
+customer_order_number [R,F,C]
+credit_term [R,F,C*]
+currency [R,F,C*]
+shipping_date [R,F,C*]
+items_json
+total [R,F]
+requires_office_approval [R,F]
+description [R,F,C]
 
 Actions
 Archive
@@ -61,15 +59,15 @@ Turn into Order
 
 - table
 
-  - number
-  - applied_at
-  - credit_term
-  - customer_id
-  - customer_rep_id
-  - pdf_url
-  - currency
-  - total
-  - total_pending_payment
+  - number [R,F]
+  - applied_at [R,F]
+  - credit_term [R,F]
+  - customer_id [R,F]
+  - customer_rep_id [R,F]
+  - pdf_url [R,F]
+  - currency [R,F]
+  - total [R,F]
+  - balance [R,F]
 
 Sales invoices should dropdown and display in accordion the list of sales_invoice_items.
 
@@ -87,18 +85,18 @@ Sales_Invoice_Items should have checkboxes or numeric inputs used to insert the 
   _ created_at
   _ updated_at
   - applied_at
-  - customer_id
-  - shipping_supplier_id
-  - status
-  - customer_rep_id
-  - customer_order_number
+  - customer_id [R,F,C*]
+  - shipping_supplier_id [R,F,C]
+  - status [R,F]
+  - customer_rep_id [R,F]
+  - customer_order_number [R,F,C]
   - approved_by_billing_user_id
   - approved_by_billing_at
-  - approved_by_billing_status
-  - credit_term
-  - currency
-  - exchange_rate
-  - shipping_date
+  - approved_by_billing_status [R,F]
+  - credit_term [R,F]
+  - currency [R,F,C*]
+  - exchange_rate [R,F,C*]
+  - shipping_date [R,F,C]
   - order_items_json
   - tax_exception_json
   - tax_exoneration_json
@@ -107,14 +105,14 @@ Sales_Invoice_Items should have checkboxes or numeric inputs used to insert the 
   - customer_override_type
   - customer_override_identification
   - customer_override_email_for_invoce
-  - order_total
-  - requires_office_approval
+  - order_total [R,F]
+  - requires_office_approval [R,F]
   - approved_by_office_user_id
   - approved_by_office_at
-  - approved_by_office_status
+  - approved_by_office_status [R,F]
   - replaces_sales_invoce_id
-  - description
-  - origin
+  - description [R,F,C*]
+  - origin [R,F,C*]
 
 Create
 

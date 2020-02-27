@@ -11,7 +11,7 @@
 - approved_by_office_user_id [R,F]
 - pdf_url [R]
 - total [R,C*] ( > 0 )
-- total_pending_payment [R,C](>=0)
+- balance [R,C](>=0)
 - public_notes [R,F,C*]
 - private_notes [C]
 
@@ -42,8 +42,10 @@
   - approved_by_office_user_id [R,F]
   - currency
   - total [R,F,C*]
-  - total_pending_payment [R,F]
+  - balance [R,F]
   - items_json
+
+
 
 * Table Details
 

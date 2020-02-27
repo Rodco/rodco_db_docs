@@ -71,7 +71,7 @@ status
 Invoice_pdf
 currency
 total
-total_pending_payment
+balance
 payment_status
 
 Show details in droppdown accordion
@@ -89,7 +89,7 @@ status
 Invoice_pdf
 currency
 total
-Total_pending_payment
+balance
 payment_status
 
 Show details in droppdown accordion
@@ -110,7 +110,7 @@ purchase_order_id
 invoice_items (json)
 currency
 total
-total_pending_payment
+balance
 is_credit
 payment_status
 
@@ -121,6 +121,7 @@ Actions
 # expense_payment:
 
 Table
+
 Supplier_id
 currency
 Applied_at
@@ -136,7 +137,7 @@ Approve
 
 # expense_payment_item:
 
-table
+Table
 
 expense_payment_id
 expense_invoice_id
@@ -147,6 +148,7 @@ total
 # expense_payment_reversal:
 
 Table
+
 supplier_id
 created_at
 applied_at
