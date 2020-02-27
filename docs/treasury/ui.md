@@ -3,9 +3,9 @@
 Table
 
 - id
-- name
+- name [R,F,C*]
 - description
-- balance
+- balance [R,F]
 - api_source
 
 Actions
@@ -15,46 +15,36 @@ Create
 
 Table:
 
-- source_bank_id
-- destination_bank_id
-- amount
-- currency
-- reason
-- status
-- approved_by_user_id
-- applied_at
+- source_bank_id [R,F,C*]
+- destination_bank_id [R,F,C*]
+- amount [R,F,C*]
+- currency [R,F,C*] {\$,EU,C/}
+- reason [R,F,C*]
+- status {draft}
+- approved_by_user_id [R,F]
+- applied_at [R,F]
 
 Display drop down accordion with Bank_transfer_item's
 Actions
 Approve
-
-# Bank_transfer_item:
-
-Table:
-
-- id
-- bank_transfer_id
-- sales_payment_item_id
-- sales_payment_reversal_item_id
-- amount
 
 # purchase_order:
 
 Table
 
 - created_at
-- supplier_id
-- ordered_at
-- approved_by_user_id
-- total
-- credit_term
-- quote_url
-- expires_at
-- ordered_by_user_id
-- description
-- status
+- supplier_id [R,F,C*]
+- ordered_at [R,F,C*]
+- approved_by_user_id [R,F]
+- total [R,F,C*]
+- credit_term [R,F,C*]
+- quote_url [R,F,C*]
+- expires_at [R,F,C*]
+- ordered_by_user_id [R,F]
+- description [R,F,C*]
+- status [R,F]
 - applied_at
-- is_supplier_invoice
+- is_supplier_invoice [R,F,C*]
 
 Actions
 Approve ( as supplier or expense )
@@ -62,35 +52,35 @@ Approve ( as supplier or expense )
 # Expense_credit_note:
 
 Table
-Number
-supplier_id
-created_at
-applied_at
+Number [R,F]
+supplier_id [R,F]
+created_at [R,F]
+applied_at [R,F]
 archived
-status
-Invoice_pdf
-currency
-total
-balance
-payment_status
+status [R,F]
+Invoice_pdf [R,F]
+currency [R,F]
+total [R,F]
+balance [R,F]
+payment_status [R,F]
 
 Show details in droppdown accordion
 
 # Expense_debit_note:
 
 Table
-code
-supplier_id
-created_at
-Applied_at
-invoice_date
+code [R,F]
+supplier_id [R,F]
+created_at [R,F]
+Applied_at [R,F]
+invoice_date [R,F]
 archived
-status
-Invoice_pdf
-currency
-total
-balance
-payment_status
+status [R,F]
+Invoice_pdf [R,F]
+currency [R,F]
+total [R,F]
+balance [R,F]
+payment_status [R,F]
 
 Show details in droppdown accordion
 
@@ -98,21 +88,21 @@ Show details in droppdown accordion
 
 Table
 
-Number
-supplier_id
-created_at
-applied_at
-status
-invoice_date
-invoice_pdf
+Number [R,F]
+supplier_id [R,F]
+created_at [R,F]
+applied_at [R,F]
+status [R,F]
+invoice_date [R,F]
+invoice_pdf [R,F]
 invoice_xml
-purchase_order_id
+purchase_order_id [R,F]
 invoice_items (json)
-currency
-total
-balance
-is_credit
-payment_status
+currency [R,F]
+total [R,F]
+balance [R,F]
+is_credit [R,F]
+payment_status [R,F]
 
 Show invoice_items (json) on dropdown accordion
 
@@ -122,12 +112,12 @@ Actions
 
 Table
 
-Supplier_id
-currency
-Applied_at
-reference
-archived
-Status
+Supplier_id [R,F]
+currency [R,F]
+Applied_at [R,F]
+reference [R,F]
+archived [R,F]
+Status [R,F]
 
 Show expense_payment_item on dropdown accordion
 
@@ -135,52 +125,32 @@ Actions
 Revert
 Approve
 
-# expense_payment_item:
-
-Table
-
-expense_payment_id
-expense_invoice_id
-expense_credit_note_id
-expense_debit_note_id
-total
-
 # expense_payment_reversal:
 
 Table
 
-supplier_id
-created_at
-applied_at
-archived
-status
-
-# expense_payment_reversal_item:
-
-Table
-
-expense_payment_reversal_id
-expense_invoice_id
-expense_credit_note_id
-expense_debit_note_id
-total
+supplier_id [R,F]
+created_at [R,F]
+applied_at [R,F]
+archived [R,F]
+status [R,F]
 
 # expense_ticket_invoce:
 
 Table
 
-Number
-supplier_id
-created_at
-applied_at
+Number [R,F]
+supplier_id [R,F]
+created_at [R,F]
+applied_at [R,F]
 archived
-status
-invoice_date
-invoice_pdf
+status [R,F]
+invoice_date [R,F]
+invoice_pdf [R,F]
 invoice_xml
 invoice_xml_response
-currency
-total
+currency [R,F]
+total [R,F]
 
 Show invoice_items (json) in dropdown accordion
 
@@ -191,13 +161,13 @@ Approve
 
 Table
 
-number
-supplier_id
-created_at
-applied_at
-approved_payment_date
+number [R,F]
+supplier_id [R,F]
+created_at [R,F]
+applied_at [R,F]
+approved_payment_date [R,F]
 archived
-status
+status [R,F]
 
 Show supplier_payment_item on dropdown accordion
 
@@ -205,38 +175,18 @@ Actions
 Approve
 Revert
 
-# supplier_payment_item:
-
-Table
-
-supplier_payment_id
-supplier_invoice_id
-supplier_credit_note_id
-supplier_debit_note_id
-total
-
 # supplier_payment_reversal:
 
 Table
 
-number
-supplier_id
-created_at
-applied_at
-archived
-status
-total
+number [R,F]
+supplier_id [R,F]
+created_at [R,F]
+applied_at [R,F]
+status [R,F]
+total [R,F]
 
 Show supplier_payment_reversal_id on dropdown accordion
 
 Actions
 Approve
-
-# supplier_payment_reversal_item:
-
-Table
-supplier_payment_id
-supplier_invoice_id
-supplier_credit_note_id
-supplier_debit_note_id
-total

@@ -1,13 +1,13 @@
 # supplier:
 
 Table
-name
-country
+name [R,F,C*]
+country [R,F,C*]
 phone
 website
-credit_term
-credit_limit
-is_shipping_supplier
+credit_term [R,F,C*] {0}
+credit_limit [R,F,C*] {0}
+is_shipping_supplier [R,F] {false}
 
 Actions
 create
@@ -18,14 +18,14 @@ Table
 received_at
 created_at
 updated_at
-supplier_id
+supplier_id [R,F,C*]
 applied_at
-currency
-total
-balance
-status
+currency [R,F,C*]
+total [R,F,C*]
+balance [R,F]
+status [R,F]
 archived
-payment_status
+payment_status [R,F]
 
 Actions
 Create
@@ -37,15 +37,15 @@ Table
 
 created_at
 updated_at
-supplier_id
+supplier_id [R,F,C*]
 applied_at
-currency
-total
-balance
-received_at
-status
+currency [R,F,C*]
+total [R,F,C*]
+balance [R,F,C*]
+received_at [R,F]
+status [R,F]
 archived
-payment_status
+payment_status [R,F]
 
 Actions
 Create
@@ -56,16 +56,16 @@ Approve
 Table
 created_at
 updated_at
-supplier_id
-applied_at
-received_at
-ordered_at
-purchase_order_id
-status
-product_warehouse_id
+supplier_id [R,F,C*]
+applied_at [R,F]
+received_at [R,F]
+ordered_at [R,F,C*]
+purchase_order_id [R,F,C*]
+status [R,F]
+product_warehouse_id [R,F,C*]
 archived
-currency
-total
+currency [R,F,C*]
+total [R,F,C*]
 balance
 payment_status
 
@@ -74,20 +74,3 @@ dropdown with accordion to show supplier_invoice_item's and supplier_invoice_ite
 Actions
 Create
 Approve
-
-# supplier_invoice_item:
-
-Table
-product_id
-amount
-price
-discount
-tax
-supplier_invoice_id
-
-# supplier_invoice_item_received:
-
-Table
-product_id
-amount
-supplier_invoice_id
