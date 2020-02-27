@@ -6,7 +6,7 @@
 - created_at [R,F]
 - applied_at [R,F]
 - customer_id [R,F,C*]
-- customer_rep_id [R,F] _Autoselect from customer_id_
+- customer*rep_id [R,F] \_Autoselect from customer_id*
 - approved_by_billing_user_id [R,F]
 - approved_by_office_user_id [R,F]
 - pdf_url [R]
@@ -31,18 +31,18 @@
 
 - Table
 
-  - created_at
-  - number
+  - created_at [R,F]
+  - number [R,F]
   - code
-  - applied_at
+  - applied_at [R,F]
   - archived
-  - customer_id
-  - customer_rep_id
-  - approved_by_billing_user_id
-  - approved_by_office_user_id
+  - customer_id [R,F,C*]
+  - customer_rep_id [R,F]
+  - approved_by_billing_user_id [R,F]
+  - approved_by_office_user_id [R,F]
   - currency
-  - total
-  - total_pending_payment
+  - total [R,F,C*]
+  - total_pending_payment [R,F]
   - items_json
 
 * Table Details
@@ -60,7 +60,7 @@
 - Table
 
   - number
-  - customer_id
+  - customer_id [R,F,C*]
   - created_at
   - applied_at
   - received_at
@@ -68,8 +68,9 @@
   - customer_rep_id
   - created_by_user_id
   - confirmed_by_user_id
-  - deposited_in_bank_id
+  - deposited_in_bank_id [R,F,C*]
   - items_json
+  - total [R,F]
 
   * Table Details
 
@@ -87,7 +88,7 @@
 - Table
 
   - number
-  - customer_id
+  - customer_id [R,F,C*]
   - created_at
   - applied_at
   - received_at
@@ -95,8 +96,9 @@
   - customer_rep_id
   - created_by_user_id
   - confirmed_by_user_id
-  - deposited_in_bank_id
+  - deposited_in_bank_id [R,F,C*]
   - items_json
+  - total
 
   * Table Details
 
@@ -114,17 +116,17 @@
 
   - Table
 
-    - created_at
+    - created_at [R,F]
     - applied_at
-    - customer_id
-    - status
-    - customer_rep_id
-    - approved_by_billing_status
-    - credit_term
+    - customer_id [R,F]
+    - status [R,F]
+    - customer_rep_id [R,F]
+    - approved_by_billing_status [R,F]
+    - credit_term [R,F]
     - currency
-    - order_total
-    - requires_office_approval
-    - approved_by_office_status
+    - order_total [R,F]
+    - requires_office_approval [R,F]
+    - approved_by_office_status [R,F]
 
   - Actions:
 
