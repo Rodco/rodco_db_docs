@@ -3,13 +3,13 @@
 - Table
 
   - id
-  - name
-  - product_brand_id
-  - product_type_category_id
-  - unit
-  - presentation
-  - product_tax_id
-  - description
+  - name [R,F,C*]
+  - product_brand_id [R,F,C*]
+  - product_type_category_id [R,F,C*]
+  - unit [R,F,C*]
+  - presentation [R,F,C*]
+  - product_tax_id [R,F,C*]
+  - description [R,F,C*]
   - image_url
 
   Dropdown collapse with inventory details
@@ -27,7 +27,7 @@
 - Table
 
   - id
-  - name
+  - name [R,F,C*]
 
 - actions
   - create
@@ -37,7 +37,7 @@
 - Table
 
   - id
-  - name
+  - name [R,F,C*]
 
 - actions
   - create
@@ -47,8 +47,8 @@
 - Table
 
   - id
-  - name
-  - product_type_id
+  - name [R,F,C*]
+  - product_type_id [R,F,C*]
 
 - actions
   - create
@@ -57,15 +57,16 @@
 
 Table
 
-- sales_invoce_id
-- type
-- shipping_supplier_id
+- id
+- sales_invoce_id [R,F]
+- type [R,F,U]
+- shipping_supplier_id [R,F,U]
 - created_at
 - prepared_at
-- deliveried_at
-- shipping_route_id
-- status
-- shipment_cost
+- deliveried_at [R,F,U]
+- shipping_route_id [R,F,U]
+- status [R,F,U]
+- shipment_cost [R,F,U]
 
   Should display dropdown accordion with packing_list_item under each packing_list
 
@@ -82,22 +83,12 @@ Table
     set deliveried_at
     set archived=true
 
-# packing_list_item:
-
-Table
-
-- id
-- packing_list_id
-- product_id
-- amount
-
 # product_warehouse:
 
 Table
 
-- name
-- description
-- items_json
+- name [R,F,C*]
+- description [R,F,C*]
 
   Table should include accordion drop down with
 
@@ -108,9 +99,9 @@ Table
 
 Table
 
-- product_warehouse_id
-- product_id
-- inventory
+- product_warehouse_id [R,F]
+- product_id [R,F]
+- inventory [R,F]
 
 Filterable by product_warehouse_id and product's [product_brand_id, product_type_category_id, product_type_id]
 
@@ -120,12 +111,12 @@ Table
 
 - created_at
 - applied_at
-- status
-- approved_by_user_id
-- created_by_user_id
-- reason_for_transfer
-- destination_warehouse_id
-- source_warehouse_id
+- status (draft)
+- approved_by_user_id [R,F]
+- created_by_user_id [R,F]
+- reason_for_transfer [R,F,C*]
+- destination_warehouse_id [R,F,C*]
+- source_warehouse_id [R,F]
 
   Should display dropdown accordion with product_warehouse_transfer_item under each transfer
 
@@ -134,22 +125,15 @@ Table
   - Approve
     Sets archived=true and approved_by_user_id
 
-# product_warehouse_transfer_item:
-
-- Table
-
-  - product_warehouse_transfer_id
-  - product_id
-  - amount
-
 # truck:
 
 - table
 
-  - name
-  - license_plate
-  - brand
-  - model
+  - id
+  - name [R,F,C*]
+  - license_plate [R,F,C*]
+  - brand [R,F,C*]
+  - model [R,F,C*]
 
 - actions
   - create
@@ -158,13 +142,14 @@ Table
 
 - table
 
-  - shipped_at
-  - returned_at
-  - truck_id
-  - total_km
-  - driver_user_id
-  - assistant_user_id
-  - status
+  - id
+  - shipped_at [R,F,C]
+  - returned_at [R,F,C]
+  - truck_id [R,F,C*]
+  - total_km [R,F,C*]
+  - driver_user_id [R,F,C*]
+  - assistant_user_id [R,F,C*]
+  - status [R,F,C*]
 
   - Actions
     - Create
@@ -173,20 +158,21 @@ Table
 # supplier_invoice:
 
 Table
+id
 created_at
 updated_at
-supplier_id
+supplier_id [R,F]
 applied_at
-received_at
-ordered_at
-purchase_order_id
-status
-product_warehouse_id
+received_at [R,F,U]
+ordered_at [R,F,U]
+purchase_order_id [R,F]
+status (draft)
+product_warehouse_id [R,F,U]
 archived
-currency
-total
-total_pending_payment
-payment_status
+currency [R,F] {\$,EU,C/}
+total [R,F]
+total_pending_payment [R,F]
+payment_status [R,F]
 
 dropdown with accordion to show supplier_invoice_item's and supplier_invoice_item_received
 
