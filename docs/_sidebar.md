@@ -1,11 +1,11 @@
 <!-- docs/_sidebar.md -->
 
 - Overview
-  - [Getting Started](/accounting/database.md)
+  - [Getting Started](/readme.md)
 
 * Architecture
 
-  - [backend](/backend/backend.md)
+  - [backend](/architecture/backend.md)
   - [ui](/architecture/ui.md)
   - [priceLists](/architecture/priceLists.md)
   - [productOrganization](/architecture/productOrganization.md)
@@ -43,17 +43,18 @@
     - [permissions](/supplier/permissions.md)
     - [ui](/supplier/ui.md)
   * Treasury
+
     - [data model](/treasury/database.md)
     - [process](/treasury/process.md)
     - [permissions](/treasury/permissions.md)
     - [ui](/treasury/ui.md)
 
-* Managment
+  * Managment
 
-  - [data model](/managment/database.md)
-  - [process](/managment/process.md)
-  - [permissions](/managment/permissions.md)
-  - [ui](/managment/ui.md)
+    - [data model](/managment/database.md)
+    - [process](/managment/process.md)
+    - [permissions](/managment/permissions.md)
+    - [ui](/managment/ui.md)
 
 - UI Components
   - [Product Price Selector](/components/productPriceSelector.md)
