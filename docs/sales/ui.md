@@ -60,6 +60,7 @@ Turn into Order
 - table
 
   - number [R,F]
+  - readable_number
   - applied_at [R,F]
   - credit_term [R,F]
   - customer_id [R,F]

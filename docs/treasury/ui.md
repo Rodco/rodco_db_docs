@@ -63,6 +63,7 @@ Approve ( as supplier or expense )
 
 Table
 Number
+readable_number
 supplier_id
 created_at
 applied_at
@@ -99,6 +100,7 @@ Show details in droppdown accordion
 Table
 
 Number
+readable_number
 supplier_id
 created_at
 applied_at
@@ -170,6 +172,7 @@ total
 Table
 
 Number
+readable_number
 supplier_id
 created_at
 applied_at
@@ -192,6 +195,7 @@ Approve
 Table
 
 number
+readable_number
 supplier_id
 created_at
 applied_at
@@ -220,6 +224,7 @@ total
 Table
 
 number
+readable_number
 supplier_id
 created_at
 applied_at

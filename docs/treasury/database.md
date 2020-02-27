@@ -58,6 +58,7 @@ Credit note created by supplier
 
 - Id
 - Number
+- readable_number
 - code
 - external_id
 - supplier_id
@@ -102,6 +103,7 @@ Debit note created by supplier
 
 - Id
 - Number
+- readable_number
 - code
 - external_id
 - supplier_id
@@ -144,6 +146,7 @@ Debit note created by supplier
 
 - id
 - Number
+- readable_number
 - code 
 - external_id ?
 - supplier_id
@@ -192,6 +195,7 @@ Debit note created by supplier
 
 - id
 - Number
+- readable_number
 - code 
 - external_id 
 - supplier_id
@@ -238,6 +242,7 @@ Debit note created by supplier
 - id
 - approved_payment_date
 - number
+- readable_number
 - external_id
 - supplier_id
 - created_at
@@ -266,6 +271,7 @@ Debit note created by supplier
 - id
 - approved_payment_date
 - number
+- readable_number
 - external_id
 - supplier_id
 - created_at
