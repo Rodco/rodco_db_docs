@@ -33,6 +33,7 @@
 
   - created_at [R,F]
   - number [R,F]
+  - readable_number
   - code
   - applied_at [R,F]
   - archived
@@ -62,6 +63,7 @@
 - Table
 
   - number
+  - readable_number
   - customer_id [R,F,C*]
   - created_at
   - applied_at
@@ -90,6 +92,7 @@
 - Table
 
   - number
+  - readable_number
   - customer_id [R,F,C*]
   - created_at
   - applied_at

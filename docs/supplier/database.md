@@ -51,6 +51,7 @@
 - code
 - number
 - api_source [*]
+- readable_number
 
 #### suppler_debit_note:
 
@@ -86,7 +87,8 @@
 - items_json
 - code
 - number
-- api_source [*]
+- readable_number
+- api_source
 
 #### supplier_invoice:
 
@@ -125,6 +127,7 @@
 - items_json
 - code
 - number
+- readable_number
 - schedule_at
 - expires_at
 - api_source [*]

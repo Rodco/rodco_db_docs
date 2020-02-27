@@ -52,10 +52,13 @@ Approve ( as supplier or expense )
 # Expense_credit_note:
 
 Table
+<<<<<<< HEAD
 Number [R,F]
+readable_number [R,F]
 supplier_id [R,F]
 created_at [R,F]
 applied_at [R,F]
+
 archived
 status [R,F]
 Invoice_pdf [R,F]
@@ -88,6 +91,7 @@ Show details in droppdown accordion
 
 Table
 
+<<<<<<< HEAD
 Number [R,F]
 supplier_id [R,F]
 created_at [R,F]
@@ -95,14 +99,25 @@ applied_at [R,F]
 status [R,F]
 invoice_date [R,F]
 invoice_pdf [R,F]
-invoice_xml
-purchase_order_id [R,F]
-invoice_items (json)
-currency [R,F]
-total [R,F]
-balance [R,F]
-is_credit [R,F]
-payment_status [R,F]
+=======
+Number
+readable_number
+supplier_id
+created_at
+applied_at
+status
+invoice_date
+invoice_pdf
+
+> > > > > > > 8b1899b80b4f1ddae0fcd3f54799bfefb76467c4
+> > > > > > > invoice_xml
+> > > > > > > purchase_order_id [R,F]
+> > > > > > > invoice_items (json)
+> > > > > > > currency [R,F]
+> > > > > > > total [R,F]
+> > > > > > > balance [R,F]
+> > > > > > > is_credit [R,F]
+> > > > > > > payment_status [R,F]
 
 Show invoice_items (json) on dropdown accordion
 
@@ -139,18 +154,27 @@ status [R,F]
 
 Table
 
+<<<<<<< HEAD
 Number [R,F]
 supplier_id [R,F]
 created_at [R,F]
 applied_at [R,F]
-archived
-status [R,F]
-invoice_date [R,F]
-invoice_pdf [R,F]
-invoice_xml
-invoice_xml_response
-currency [R,F]
-total [R,F]
+=======
+Number
+readable_number
+supplier_id
+created_at
+applied_at
+
+> > > > > > > 8b1899b80b4f1ddae0fcd3f54799bfefb76467c4
+> > > > > > > archived
+> > > > > > > status [R,F]
+> > > > > > > invoice_date [R,F]
+> > > > > > > invoice_pdf [R,F]
+> > > > > > > invoice_xml
+> > > > > > > invoice_xml_response
+> > > > > > > currency [R,F]
+> > > > > > > total [R,F]
 
 Show invoice_items (json) in dropdown accordion
 
@@ -162,10 +186,12 @@ Approve
 Table
 
 number [R,F]
+readable_number[R,F]
 supplier_id [R,F]
 created_at [R,F]
 applied_at [R,F]
 approved_payment_date [R,F]
+
 archived
 status [R,F]
 
@@ -180,6 +206,7 @@ Revert
 Table
 
 number [R,F]
+readable_number
 supplier_id [R,F]
 created_at [R,F]
 applied_at [R,F]

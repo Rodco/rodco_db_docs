@@ -97,6 +97,7 @@
 - created_at
 - updated_at
 - number [*]
+- readable_number
 - code [*]
 - applied_at
 - credit_term [*]

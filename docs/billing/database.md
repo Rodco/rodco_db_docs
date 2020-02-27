@@ -4,6 +4,7 @@
 - created_at
 - updated_at
 - number
+- readable_number
 - code
 - applied_at
 - archived
@@ -60,6 +61,7 @@
 - created_at
 - updated_at
 - number
+- readable_number
 - code
 - applied_at
 - credit_term
@@ -113,6 +115,7 @@
 
 - Id
 - number
+- readable_number
 - external_id
 - customer_id [*]
 - created_at

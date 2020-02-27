@@ -58,6 +58,7 @@ Credit note created by supplier
 
 - Id
 - Number
+- readable_number
 - code
 - external_id
 - supplier_id [*]
@@ -102,6 +103,7 @@ Debit note created by supplier
 
 - Id
 - Number
+- readable_number
 - code
 - external_id
 - supplier_id [*]
@@ -145,6 +147,7 @@ Debit note created by supplier
 - id
 - Number [*]
 - code [*]
+- readable_number
 - external_id ?
 - supplier_id [*]
 - created_at
@@ -194,50 +197,53 @@ Debit note created by supplier
 - Number [*]
 - code [*]
 - external_id
-- supplier_id [*]
-- created_at
-- updated_at
-- applied_at
-- received_at
-- archived
-- status
-- invoice_date [*]
-- invoice_pdf
-- invoice_xml
-- invoice_xml_response
-- eletronic_invoice_response
-- purchase_order_id
-- invoice_items (json)
-- currency [*]
-- exchange_rate [*]
-- service_sub_total_taxed [*]
-- service_sub_total_exempt [*]
-- service_sub_total_exonerated [*]
-- product_sub_total_taxed [*]
-- product_sub_total_exempt [*]
-- product_sub_total_exonerated [*]
-- sub_total_taxed [*]
-- sub_total_exempt [*]
-- sub_total_exonerated [*]
-- sub_total [*]
-- discount_total [*]
-- sub_total_net [*]
-- tax_total [*]
-- tax_exception_json
-- tax_exoneration_json
-- tax_total_returned
-- total [*]
-- balance
-- is_credit
-- reference_document
-- regulation
-- api_source [*]
+- readable_number
+
+* supplier_id
+* created_at
+* updated_at
+* applied_at
+* received_at
+* archived
+* status
+* invoice_date [*]
+* invoice_pdf
+* invoice_xml
+* invoice_xml_response
+* eletronic_invoice_response
+* purchase_order_id
+* invoice_items (json)
+* currency [*]
+* exchange_rate [*]
+* service_sub_total_taxed [*]
+* service_sub_total_exempt [*]
+* service_sub_total_exonerated [*]
+* product_sub_total_taxed [*]
+* product_sub_total_exempt [*]
+* product_sub_total_exonerated [*]
+* sub_total_taxed [*]
+* sub_total_exempt [*]
+* sub_total_exonerated [*]
+* sub_total [*]
+* discount_total [*]
+* sub_total_net [*]
+* tax_total [*]
+* tax_exception_json
+* tax_exoneration_json
+* tax_total_returned
+* total [*]
+* balance
+* is_credit
+* reference_document
+* regulation
+* api_source [*]
 
 #### supplier_payment:
 
 - id
 - approved_payment_date
 - number
+- readable_number
 - external_id
 - supplier_id [*]
 - created_at
@@ -265,7 +271,10 @@ Debit note created by supplier
 
 - id
 - approved_payment_date
-- number [*]
+
+- number
+- readable_number
+
 - external_id
 - supplier_id [*]
 - created_at
