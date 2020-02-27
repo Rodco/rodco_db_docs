@@ -40,7 +40,7 @@
 - tax_exoneration_json
 - tax_total_returned
 - total
-- total_pending_payment
+- balance
 - received_at
 - status
 - archived
@@ -75,7 +75,7 @@
 - tax_exoneration_json
 - tax_total_returned
 - total
-- total_pending_payment
+- balance
 - received_at
 - status
 - archived
@@ -116,7 +116,7 @@
 - tax_exoneration_json
 - tax_total_returned
 - total
-- total_pending_payment
+- balance
 - payment_status
 - items_json
 - code

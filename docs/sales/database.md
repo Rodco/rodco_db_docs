@@ -13,7 +13,6 @@
 * id
 * name
 * markup
-* discount
 * api_source
 
 #### product_price_list_item:
@@ -23,7 +22,6 @@
 * markup
 * price_type
 * product_price_list_id
-* discount
 * api_source
 
 #### quote:
@@ -133,7 +131,7 @@
 * tax_exoneration_json
 * Tax_total_returned
 * total
-* total_pending_payment
+* balance
 * public_notes
 * private_notes
 * payment_form

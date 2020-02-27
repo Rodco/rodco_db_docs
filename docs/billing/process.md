@@ -10,7 +10,7 @@ There are threee kinds of Sales Credit Notes
 
 - on archived=true
 
-- set applied_at, status, total_pending_payment
+- set applied_at, status, balance
 - if financial credit_note then set fields accordingly. [TODO:complete field details]
 - create sales_credit_note_item for each entry in items
 
@@ -29,7 +29,7 @@ There are two kinds of Sales Debit Notes
 
 on archived=true
 
-- set applied_at, status, total_pending_payment
+- set applied_at, status, balance
 - if financial debit_note then set fields accordingly. [TODO:complete field details]
 - create sales_debit_note_item for each entry in items
 

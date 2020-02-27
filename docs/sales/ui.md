@@ -69,7 +69,7 @@ Turn into Order
   - pdf_url
   - currency
   - total
-  - total_pending_payment
+  - balance
 
 Sales invoices should dropdown and display in accordion the list of sales_invoice_items.
 

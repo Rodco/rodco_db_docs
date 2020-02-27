@@ -36,7 +36,7 @@
 - tax_exoneration_json
 - tax_total_returned
 - total [*] >0
-- total_pending_payment [*] >=0 createTrigger = total
+- balance [*] >=0 createTrigger = total
 - public_notes
 - private_notes
 - payment_form
@@ -90,7 +90,7 @@
 - tax_exception_json
 - tax_exoneration_json
 - tax_total_returned
-- total_pending_payment [*] (>= 0) createTrigger = total
+- balance [*] (>= 0) createTrigger = total
 - public_notes
 - private_notes
 - payment_form
@@ -168,3 +168,4 @@
 - sales_debit_note_id
 - total [*] (> 0)
 - api_source [*]
+- product_tax_id

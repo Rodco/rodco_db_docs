@@ -184,7 +184,7 @@ product_warehouse_id
 archived
 currency
 total
-total_pending_payment
+balance
 payment_status
 
 dropdown with accordion to show supplier_invoice_item's and supplier_invoice_item_received

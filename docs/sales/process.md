@@ -15,7 +15,7 @@ There are no updates, deletes or creates.
 
 - Trigger
 
-  - don't allow total_pending_payment below 0
+  - don't allow balance below 0
 
 - Actions
   - resend

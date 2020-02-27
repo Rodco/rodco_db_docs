@@ -18,6 +18,7 @@ Trigger:
 - comision_rate
 - product_cost_as_price_id
 - api_source
+- discount_rate
 
 # product_brand:
 
