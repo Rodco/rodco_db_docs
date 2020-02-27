@@ -2,6 +2,7 @@
 
 - Table
 
+  - id
   - name
   - product_brand_id
   - product_type_category_id

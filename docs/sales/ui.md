@@ -116,7 +116,11 @@ Sales_Invoice_Items should have checkboxes or numeric inputs used to insert the 
   - description
   - origin
 
-* Actions
+Create
+
+When customer does no exist, there must be the way to quickly create within a Modal. Such created customers only require Name, Province and Phone, Identification, Identification_Type and invoice_email.
+
+- Actions
 
   - Approve
 
