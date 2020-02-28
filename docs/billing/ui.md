@@ -129,7 +129,7 @@
     - approved_by_billing_status [R,F]
     - credit_term [R,F]
     - currency
-    - order_total [R,F]
+    - total [R,F]
     - requires_office_approval [R,F]
     - approved_by_office_status [R,F]
 

@@ -92,6 +92,7 @@ Trigger:
 - destination_warehouse_id [*]
 - source_warehouse_id
 - api_source [*]
+- items_json
 
 #### product_warehouse_transfer_item:
 

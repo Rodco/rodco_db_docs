@@ -44,7 +44,7 @@ total
 balance
 received_at
 status
-archived
+
 payment_status
 
 Actions

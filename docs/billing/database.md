@@ -44,6 +44,7 @@
 - payment_status
 - items_json
 - api_source
+- status
 
 #### sales_credit_note_item:
 
@@ -131,6 +132,8 @@
 - items_json
 - api_source [*]
 - total [*]
+- payment_form
+- payment_reference
 
 #### sales_payment_item:
 
@@ -161,6 +164,8 @@
 - items_json
 - total [*] (> 0)
 - api_source [*]
+- payment_form
+- payment_reference
 
 #### sales_payment_reserval_item:
 

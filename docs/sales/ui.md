@@ -106,7 +106,7 @@ Sales_Invoice_Items should have checkboxes or numeric inputs used to insert the 
   - customer_override_type
   - customer_override_identification
   - customer_override_email_for_invoce
-  - order_total [R,F]
+  - total [R,F]
   - requires_office_approval [R,F]
   - approved_by_office_user_id
   - approved_by_office_at

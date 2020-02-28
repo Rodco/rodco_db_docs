@@ -145,3 +145,4 @@
 - amount
 - supplier_invoice_id
 - api_source
+- cost

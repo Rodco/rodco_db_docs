@@ -51,6 +51,7 @@
 - applied_at
 - is_supplier_invoice
 - api_source
+- is_international
 
 #### Expense_credit_note:
 
@@ -252,6 +253,9 @@ Debit note created by supplier
 - archived
 - status
 - api_source
+- payment_form
+- payment_reference
+- total
 
 #### supplier_payment_item:
 
@@ -282,6 +286,8 @@ Debit note created by supplier
 - status
 - total
 - api_source
+- payment_form
+- payment_reference
 
 #### supplier_payment_reversal_item:
 

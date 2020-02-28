@@ -202,6 +202,7 @@ applied_at
 approved_payment_date
 archived
 status
+total
 
 Show supplier_payment_item on dropdown accordion
 

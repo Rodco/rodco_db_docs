@@ -65,14 +65,14 @@ credit_term
 currency
 exchange_rate
 shipping_date
-quote_items_json
+items_json
 tax_exception_json
 tax_exoneration_json
 order_id
 customer_override_type
 customer_override_identification
 customer_override_email_for_invoce
-order_total
+total
 requires_office_approval
 approved_by_office_user_id
 approved_by_office_at
@@ -107,7 +107,7 @@ quote_id
 customer_override_type
 customer_override_identification
 customer_override_email_for_invoce
-order_total
+total
 requires_office_approval
 approved_by_office_user_id
 approved_by_office_at

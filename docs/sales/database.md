@@ -39,14 +39,14 @@
 - currency [*]
 - exchange_rate [*] > 0
 - shipping_date
-- quote_items_json
+- items_json
 - tax_exception_json
 - tax_exoneration_json
 - order_id
 - customer_override_type
 - customer_override_identification
 - customer_override_email_for_invoce
-- order_total [*] >0
+- total [*] >0
 - requires_office_approval
 - approved_by_office_user_id
 - approved_by_office_at
@@ -80,7 +80,7 @@
 - customer_override_type
 - customer_override_identification
 - customer_override_email_for_invoce
-- order_total [*]
+- total [*]
 - requires_office_approval
 - approved_by_office_user_id
 - approved_by_office_at
@@ -155,5 +155,5 @@
 - tax_rate [*] >= 0
 - product_cost_id [*]
 - discount_reason
-- amount_return {0}
+- amount_returned {0}
 - api_source [*]
