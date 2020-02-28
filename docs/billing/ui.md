@@ -1,5 +1,16 @@
 ### Credit Note
 
+#### User Stories
+
+- Billing Reps create sales notes to apply special discount policies or rebates to a customer.
+- When a billing rep is creating a note and they select the customer_id, the customer_rep_id present in the customer must be automatically added to the note.
+- Notes can be automatically created from Void Sales Invoices by Sales Reps in another table. This Notes have product lines.
+- Notes can be automatically created from Customer Returns by Logistic Reps in another table. This Notes have product lines.
+- Billing Reps, Sales Reps, Logistic Reps or Managers can not update a credit note, only those archive=false can be deleted.
+- Billing Reps use tables to filter and find notes by customer_id, customer_rep_id, total and balance.
+- All Reps must be able to see the line items of each note, typically containing a product_id, amount, price and discount.
+- All Notes are created in status=draft, an office manager must approve each of them by pressing a button.
+
 #### Table
 
 - Id
@@ -15,13 +26,6 @@
 - public_notes [R,F,C*]
 - private_notes [C]
 
-  - Table Details
-
-    - Use component tableItemsDetails with sales_credit_note_item
-
-  - Create/Update
-    - when a customer_id is selected customer_rep_id should automatically be selected.
-
 ##### Actions:
 
 - Create
@@ -30,7 +34,18 @@
 
 # Debit Note
 
-- Table
+#### User Stories
+
+- Billing Reps create sales notes to apply special discount policies or rebates to a customer.
+- When a billing rep is creating a note and they select the customer_id, the customer_rep_id present in the customer must be automatically added to the note.
+- Notes can be automatically created from Void Sales Invoices by Sales Reps in another table. This Notes have product lines.
+- Notes can be automatically created from Customer Returns by Logistic Reps in another table. This Notes have product lines.
+- Billing Reps, Sales Reps, Logistic Reps or Managers can not update a credit note, only those archive=false can be deleted.
+- Billing Reps use tables to filter and find notes by customer_id, customer_rep_id, total and balance.
+- All Reps must be able to see the line items of each note, typically containing a product_id, amount, price and discount.
+- All Notes are created in status=draft, an office manager must approve each of them by pressing a button.
+
+* Table
 
   - created_at [R,F]
   - number [R,F]
@@ -47,18 +62,27 @@
   - balance [R,F]
   - items_json
 
-  * Table Details
-    Use component tableItemsDetails with sales_debit_note_item
-
-  * Create/Update
-    - when a customer_id is selected customer_rep_id should automatically be selected.
-
-* Actions:
+- Actions:
   - Create
   - delete
     - if archived!=true
 
 # Sales_payment
+
+#### User Stories
+
+- Billing Reps create sales payments to record fisical and digital payments being received from customers.
+- Remote Sales Reps create sales payments to record fisical and digital payments being received from customers.
+- When a customer is selected, the customer's customer_rep_id is auto-selected
+- When a customer is selected, the customer's pending sales invoices and notes with balance > 0 are displayed.
+- The Billing/Remote Rep selects the invoices being paid and edit's it's amount if neccesary.
+- The sales_payment total is updated each time the user add's invoices or edit's it's amount.
+- When a Credit Note is selected, it's balance should be substracted from the total payment instead of aditioned.
+- Reps can update and delete payments as long as archived=false.
+- Details of items of the payment and their amounts should be stored in the field items_json
+- Finance Reps approve payments and the backend system converts items_json into sales_payment_items among other steps.
+- Reps and managers can search and filter using customer_id, created_at, applied_at,status,customer_rep_id,created_by_user_id,deposited_in_bank_id and total.
+- Reps and managers can click on a row to open a dropdown with the items_json or sales_payment_items details.
 
 - Table
 
@@ -69,31 +93,26 @@
   - applied_at
   - received_at
   - status
-  - customer_rep_id
-  - created_by_user_id
+  - customer_rep_id [R,F]
+  - created_by_user_id [R,F]
   - confirmed_by_user_id
   - deposited_in_bank_id [R,F,C*]
   - items_json
   - total [R,F]
 
-  * Table Details
+* Create
 
-    - Use component tableItemsDetails with Sales_payment_item
+  - on create set created_by_user_id to the current user
+  - use component salesInvoicePaymentSelector
+    - load invoices when customer_id is selected
+    - on update of amounts, update sales_payment.total and items_json
 
-  * Create
+* Update
 
-    - on create set created_by_user_id to the current user
-    - on customer_id select set customer_rep_id from customer
-    - use component salesInvoicePaymentSelector
-      - load invoices when customer_id is selected
-      - on update of amounts, update sales_payment.total and items_json
-
-  * Update
-
-    - do not allow customer_id changes
-    - use component salesInvoicePaymentSelector
-      - load invoices when customer_id is selected
-      - on update of amounts, update sales_payment.total and items_json
+  - do not allow customer_id changes
+  - use component salesInvoicePaymentSelector
+    - load invoices when customer_id is selected
+    - on update of amounts, update sales_payment.total and items_json
 
 * Actions:
   - apply
@@ -105,28 +124,32 @@
 
 # sales_payment_reversal
 
+### User Cases
+
+- When a mistake is made on a payment and that payment has alredy been archived, a billing rep can request the reversal of such payment.
+- A finance rep will it turn approve the payment reveral
+- Reps and managers can search and filter using customer_id, created_at, applied_at,status,customer_rep_id,created_by_user_id,deposited_in_bank_id and total.
+- Reps and managers can click on a row to open a dropdown with the items_json or sales_payment_reversal_items details.
+
 - Table
 
-  - number
+  - number [R,F]
   - readable_number
   - customer_id [R,F,C*]
-  - created_at
-  - applied_at
+  - created_at [R,F]
+  - applied_at [R,F]
   - received_at
-  - status
-  - customer_rep_id
-  - created_by_user_id
-  - confirmed_by_user_id
-  - deposited_in_bank_id [R,F,C*]
+  - status [R,F]
+  - customer_rep_id [R,F]
+  - created_by_user_id [R,F]
+  - confirmed_by_user_id [R,F]
+  - deposited_in_bank_id [R,F]
   - items_json
-  - total
-
-  * Table Details
-    - Use component tableItemsDetails with sales_payment_reversal
+  - total [R,F]
 
 * Actions:
 
-  - apply
+  - approve
     - set archived=true
   - delete
     - if archived!=true

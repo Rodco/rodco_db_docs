@@ -1,5 +1,10 @@
 # supplier:
 
+User Cases
+
+- Reps from multiple departmanets must create and update suppliers.
+- Reps must search for and filter by name and is_shipping_supplier
+
 Table
 name [R,F,C*]
 country [R,F,C*]
@@ -13,6 +18,10 @@ Actions
 create
 
 # supplier_credit_note:
+
+- Treasure Reps, in the strange circumstance of a supplier issuing a credit note, they need to create it.
+- Treasure Reps want to search and filter credit notes to answer specific questions like what's it's balance or when was it created.
+- Finance Reps want to approve supplier_credit_note so they become active in the system and available in payments.
 
 Table
 received_at
@@ -31,7 +40,12 @@ Actions
 Create
 Approve
 
-# suppler_debit_note:
+# supplier_debit_note:
+
+- Treasure Reps, in the strange circumstance of an international supplier issuing a credit note, they need to create it.
+- Treasure Reps, in the strange circumstance of an local supplier issuing a credit note, must upload it's .
+- Treasure Reps want to search and filter credit notes to answer specific questions like what's it's balance or when was it created.
+- Finance Reps want to approve supplier_credit_note so they become active in the system and available in payments.
 
 Table
 
@@ -53,6 +67,10 @@ Approve
 
 # supplier_invoice:
 
+- Treasure Reps want to search and filter supplier_invoices to answer specific questions about their state
+- All reps want to see the supplier_invoice and supplier_invoice_items_received in a dropdown on row click.
+- Finance Reps want to approve supplier_credit_note so they become active in the system and available in payments.
+
 Table
 created_at
 updated_at
@@ -68,8 +86,6 @@ currency [R,F,C*]
 total [R,F,C*]
 balance
 payment_status
-
-dropdown with accordion to show supplier_invoice_item's and supplier_invoice_item_received
 
 Actions
 Create

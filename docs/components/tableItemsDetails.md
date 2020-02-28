@@ -1,4 +1,4 @@
-### Async Notifications
+### Table Item Details
 
 - Areas used:
   - Tables that have one-to-many relationships with a items table

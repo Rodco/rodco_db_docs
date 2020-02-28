@@ -1,7 +1,7 @@
 <!-- docs/_sidebar.md -->
 
 - Overview
-  - [Getting Started](/readme.md)
+  - [Getting Started](/)
 
 * Architecture
 
