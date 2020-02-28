@@ -1,6 +1,10 @@
 #### Customer:
 
-Retail and Wholesale customers
+#### User Cases
+
+- A sales rep creates a retail customer, retail customers have credit_term and credit_limit set to 0.
+- A Billing Rep creates a wholesale customer that have credit_term and credit_limit.
+- Reps use tables to filter and find customers by name, provice, customer_rep, customer_region, parent_corp,segment,credit_term and tags.
 
 Table
 
@@ -25,6 +29,10 @@ Table
 
 #### Customer_segment:
 
+#### User Cases
+
+- Sales Reps and managers can create customer_segments to be assigned to customers
+
 Table
 
 - id [R,F]
@@ -32,12 +40,20 @@ Table
 
 #### Customer_region:
 
+#### User Cases
+
+- Sales Reps and managers can create customer_segments to be assigned to regions
+
 Table
 
 - id [R,F]
 - name [R,F,C*]
 
 #### Customer_rep:
+
+#### User Cases
+
+- Sales Reps and managers can create customer_resp to be assigned to customers
 
 Table
 
@@ -47,6 +63,10 @@ Table
 - Phone_number [R,F,C*]
 
 #### Parent_corporation:
+
+#### User Cases
+
+- Sales Reps and managers can create parent_corporations to be assigned to customers
 
 Table
 
