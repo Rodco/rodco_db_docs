@@ -4,11 +4,11 @@
 
 #### Context
 
-There are supplier invoice and notes as well as expense invoices and notes with balances. We use supplier_payment in order to record payments.
+There are supplier invoice and notes as well as notes with balances. We use supplier_payment in order to record payments.
 
 Each document is recorded in the supplier_payment_item with the amount that's being payed. A supplier_payment can have one or more sales_payment_item.
 
-This components display all the pending invoices, credit and debit notes as well as expense invoices and notes for the selected supplier and enables the user to enter the amount being paid.
+This components display all the pending invoices, credit and debit notes as well as notes for the selected supplier and enables the user to enter the amount being paid.
 
 #### Requirements
 

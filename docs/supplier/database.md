@@ -131,6 +131,7 @@
 - schedule_at
 - expires_at
 - api_source [*]
+- is_international
 
 #### supplier_invoice_item:
 
@@ -142,12 +143,6 @@
 - tax [*] >=0
 - supplier_invoice_id [*]
 - api_source [*]
-
-#### supplier_invoice_item_received
-
-- id
-- product_id [*]
-- amount [*] >0
-- supplier_invoice_id [*]
-- api_source [*]
+- received_amount 
 - cost
+

@@ -213,6 +213,7 @@ applied_at
 received_at [R,F,U]
 status (draft) [R,F]
 product_warehouse_id [R,F,U]
+is_international
 
 Actions
 Receive
