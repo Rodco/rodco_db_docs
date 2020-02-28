@@ -201,8 +201,8 @@ Table
 # supplier_invoice:
 
 - Logistic Reps need to access and filter supplier_invoices pending of being received. ( received_at )
-- Logistic Reps need to see details ( supplier_invoice_item_received ) of supplier_invoice
-- Logistic Reps need to complete supplier_invoice_item_received when a shipment is received
+- Logistic Reps need to see details ( supplier_invoice_item ) of supplier_invoice
+- Logistic Reps need to complete supplier_invoice_item when a shipment is received
 
 Table
 id

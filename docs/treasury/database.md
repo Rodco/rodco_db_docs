@@ -53,7 +53,7 @@
 - api_source [*]
 - is_international
 
-#### Expense_credit_note:
+#### payable_credit_note:
 
 Credit note created by supplier
 
