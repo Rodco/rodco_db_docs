@@ -1,13 +1,3 @@
-
-#### Consecutive_numbers:
-Consecutive Numbers for linear documents. Updated in transactions via update +1.
-* id
-* sales_invoce
-* sales_credit_note
-* sales_debit_note
-* incomes_invoce
-* api_source
-
 #### product_cost:
 * id 
 * create_at
