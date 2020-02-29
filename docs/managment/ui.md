@@ -5,13 +5,6 @@
   - Approve
     - set archived=true
 
-# sales_debit_note
-
-- Actions:
-
-  - Approve
-    - set archived=true
-
 # order approvals ( order )
 
 - Actions:
