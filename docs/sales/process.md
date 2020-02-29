@@ -57,7 +57,6 @@ created_at
 updated_at
 applied_at
 customer_id
-shipping_supplier_id
 status
 customer_rep_id
 customer_order_number
@@ -88,7 +87,6 @@ created_at
 updated_at
 applied_at
 customer_id
-shipping_supplier_id
 status
 customer_rep_id
 customer_order_number

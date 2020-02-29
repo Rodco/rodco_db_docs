@@ -24,7 +24,6 @@ Retail and Wholesale customers
 * credit_term
 * credit_limit
 * comercial_name
-* shipping_supplier_id
 * billing_week_day
 * tags
 

@@ -25,7 +25,6 @@ Retail and Wholesale customers
 - credit_term [*] {0} (>=0)
 - credit_limit [*] {0} (>=0)
 - comercial_name
-- shipping_supplier_id
 - billing_week_day
 - tags
 - price_lists

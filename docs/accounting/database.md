@@ -5,8 +5,6 @@ Consecutive Numbers for linear documents. Updated in transactions via update +1.
 * sales_invoce
 * sales_credit_note
 * sales_debit_note
-* billing_payment
-* billing_payment_reversal
 * incomes_invoce
 * api_source
 
@@ -16,7 +14,6 @@ Consecutive Numbers for linear documents. Updated in transactions via update +1.
 * cost
 * product_id
 * initial_inventory
-* supplier_invoice_item_id
 * previous_cost
 * active
 * used_in_price_lists

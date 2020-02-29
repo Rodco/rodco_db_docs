@@ -3,7 +3,6 @@
 #### used in
 
 sales_invoce for returns
-supplier_invoice
 
 #### Context
 

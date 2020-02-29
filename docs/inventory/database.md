@@ -44,7 +44,6 @@ Trigger:
 - id
 - sales_invoce_id [*]
 - type [*]
-- shipping_supplier_id
 - created_at
 - prepared_at
 - deliveried_at
@@ -131,3 +130,24 @@ Trigger:
 - customer_id [*]
 - created_at
 - api_source [*]
+
+#### product_purchase_item:
+
+- id
+- product_id [*]
+- amount [*] >0
+- cost [*] >0
+- api_source [*]
+
+#### product_return_item
+
+- id
+- product_id [*]
+- amount [*] >0
+- price [*] >0
+- discount [*] >=0
+- tax [*] >=0
+- customer_id [*]
+- customer_rep_id [*]
+- api_source [*]
+- cost (edited) 

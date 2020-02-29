@@ -14,12 +14,6 @@
 
   - Accounting
     - [data model](/accounting/database.md)
-
-  * Billing
-    - [data model](/billing/database.md)
-    - [process](/billing/process.md)
-    - [permissions](/billing/permissions.md)
-    - [ui](/billing/ui.md)
   * Customer
     - [data model](/customer/database.md)
     - [process](/customer/process.md)
@@ -37,18 +31,6 @@
     - [ui](/sales/ui.md)
   * Settings
     - [data model](/settings/database.md)
-  * Supplier
-    - [data model](/supplier/database.md)
-    - [process](/supplier/process.md)
-    - [permissions](/supplier/permissions.md)
-    - [ui](/supplier/ui.md)
-  * Treasury
-
-    - [data model](/treasury/database.md)
-    - [process](/treasury/process.md)
-    - [permissions](/treasury/permissions.md)
-    - [ui](/treasury/ui.md)
-
   * Managment
 
     - [data model](/managment/database.md)
@@ -60,4 +42,3 @@
   - [Product Price Selector](/components/productPriceSelector.md)
   - [Product Quantity Selector](/components/productAmountSelector.md)
   - [Sales Invoice Selector](/components/salesInvoicePaymentSelector)
-  - [Supplier Invoice Selector](/components/supplyInvoicePaymentSelector)

@@ -87,7 +87,6 @@ Sales_Invoice_Items should have checkboxes or numeric inputs used to insert the 
   _ updated_at
   - applied_at
   - customer_id [R,F,C*]
-  - shipping_supplier_id [R,F,C]
   - status [R,F]
   - customer_rep_id [R,F]
   - customer_order_number [R,F,C]

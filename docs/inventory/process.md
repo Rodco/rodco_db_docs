@@ -29,7 +29,6 @@ product_type_id
 id
 sales_invoce_id
 type
-shipping_supplier_id
 created_at
 prepared_at
 deliveried_at

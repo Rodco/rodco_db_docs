@@ -31,7 +31,6 @@
 - updated_at
 - applied_at
 - customer_id [*]
-- shipping_supplier_id
 - status
 - customer_rep_id
 - customer_order_number
@@ -61,7 +60,6 @@
 - updated_at
 - applied_at
 - customer_id [*]
-- shipping_supplier_id
 - status (draft)
 - customer_rep_id
 - customer_order_number
@@ -103,7 +101,6 @@
 - credit_term [*]
 - order_id [*]
 - customer_id [*]
-- shipping_supplier_id
 - shipping_tracking_number
 - customer_rep_id
 - approved_by_billing_user_id
