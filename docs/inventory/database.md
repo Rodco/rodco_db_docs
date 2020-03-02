@@ -131,6 +131,17 @@ Trigger:
 - created_at
 - api_source [*]
 
+#### product_purchase:
+- id
+- created_at
+- updated_at
+- status
+- applied_at
+- archived
+- approved_by_user_id
+- created_by_user_id
+- reference
+
 #### product_purchase_item:
 
 - id
