@@ -150,6 +150,17 @@ Trigger:
 - cost [*] >0
 - api_source [*]
 
+#### product_return:
+- id
+- created_at
+- updated_at
+- status
+- applied_at
+- archived
+- approved_by_user_id
+- created_by_user_id
+- reference
+
 #### product_return_item
 
 - id
