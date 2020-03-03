@@ -4,6 +4,7 @@
 * id
 * email
 * api_source
+* code
 
 
 #### async_notifications
