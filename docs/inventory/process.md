@@ -13,13 +13,17 @@ product_tax_id
 description
 image_url
 comision_rate
-product_brand:
+short_code
+
+
+# product_brand:
 id
 name
-product_type:
+# product_type:
 id
 name
-product_type_category:
+
+# product_type_category:
 id
 name
 product_type_id

@@ -19,6 +19,7 @@ Trigger:
 - product_cost_as_price_id
 - api_source [*]
 - discount_rate
+- short_code
 
 # product_brand:
 
