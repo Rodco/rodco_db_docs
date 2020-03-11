@@ -142,6 +142,7 @@ Trigger:
 - approved_by_user_id
 - created_by_user_id
 - reference
+- items_json
 
 #### product_purchase_item:
 

@@ -1,0 +1,120 @@
+# product <- producto
+
+- Id <- id
+- created_at <- created_at
+- updated_at <- updated_at
+- name <- name 
+- product_cost_id <- costoHistoricoId
+- product_brand_id <- select id from product_brand_id where name = marca
+- product_type_category_id <- categoriaId 
+- unit <- unidadMedida
+- presentation <- presentacion
+- code <- codigo
+- description <- descripcion
+
+# product_brand <- select marca from producto
+
+- name <- marca
+
+# product_type <- productoDepartamento
+
+- id <- id
+- name <- name
+
+# product_type_category <- productoCategoria
+
+- id <- id 
+- name <- name 
+- product_type_id <- productoDepartamentoId
+
+# packing_list <- despacho
+
+- id <- id
+- sales_invoce_id <- documentoId
+- created_at <- created_at
+- prepared_at <- fechaAlisto
+- deliveried_at <- fecha Entrega
+- shipping_route_id 
+- status <- estado 
+- archived <- if estado = archivado ? true : false
+
+# packing_list_item <- despacho 
+
+- id <- id
+- packing_list_id <- ^ packing_list
+- product_id <- productId
+- amount <- 
+
+# product_warehouse <- create SJ one
+
+# product_warehouse_item <- producto
+
+- id 
+- product_warehouse_id <- SJ new
+- product_id <- productId
+- inventory <- inventario
+
+
+#### truck:
+
+- id
+- name
+- license_plate
+- brand
+- model
+- api_source
+
+#### shipping_route:
+
+- Id
+- shipped_at
+- returned_at
+- truck_id
+- total_km
+- driver_user_id
+- assistant_user_id
+- status
+- archived
+- api_source
+
+#### product_price_list_customer
+
+- id
+- product_price_list_id
+- customer_id
+- created_at
+- api_source
+
+#### product_purchase <- movimientoInventario where tipo = 'co'
+- id  
+- created_at <- created_at
+- updated_at <- updated_at
+- status <- estado
+- archived <- if estado = archivado ? true : false
+- reference <- referencia
+
+#### product_purchase_item <- movimientoInventario where tipo = 'co'
+
+- product_id <- productoId
+- amount <- cantidad
+- cost <-  costo
+
+#### product_return <- movimientoInventario where tipo = 'en'
+- id
+- created_at <- created_at
+- updated_at <-u pdated_at
+- status <- estado
+- archived <- if estado = archivado ? true : false
+- reference <- referencia
+
+#### product_return_item <- movimientoInventario where tipo = 'en'
+
+- id
+- product_id <- productoId  
+- amount <- cantidad    
+- price <- precio
+- discount <- descuento
+- tax <- impuesto
+- customer_id <- clienteId
+- customer_rep_id <- vendedorId
+- cost <- costo
