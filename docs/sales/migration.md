@@ -7,19 +7,19 @@
 - status <- estado
 - response <- respuesta
 
-#### product_price_list:
+#### product_price_list <- priceListHistory
 
-- id
+- id <- 
 - name
-- markup
+- markup <-
 
-#### product_price_list_item:
+#### product_price_list_item <- priceListHistory
 
-- id
-- product_id
-- markup 
-- price_type
-- product_price_list_id
+- id <- id
+- product_id <- productId
+- markup <- 
+- price_type <- 
+- product_price_list_id <-
 
 #### quote <- orden where tipo = proforma
 
