@@ -27,23 +27,7 @@
 - name <- name 
 - product_type_id <- productoDepartamentoId
 
-# packing_list <- despacho
-
-- id <- id
-- sales_invoce_id <- documentoId
-- created_at <- created_at
-- prepared_at <- fechaAlisto
-- deliveried_at <- fecha Entrega
-- shipping_route_id 
-- status <- estado 
-- archived <- if estado = archivado ? true : false
-
-# packing_list_item <- despacho 
-
-- id <- id
-- packing_list_id <- ^ packing_list
-- product_id <- productId
-- amount <- 
+# packing_list <- not migrate
 
 # product_warehouse <- create SJ one
 
@@ -54,28 +38,7 @@
 - product_id <- productId
 - inventory <- inventario
 
-
-#### truck:
-
-- id
-- name
-- license_plate
-- brand
-- model
-- api_source
-
-#### shipping_route:
-
-- Id
-- shipped_at
-- returned_at
-- truck_id
-- total_km
-- driver_user_id
-- assistant_user_id
-- status
-- archived
-- api_source
+#### shipping_route <- not migrate
 
 #### product_price_list_customer
 
