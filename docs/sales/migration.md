@@ -10,7 +10,7 @@
 #### product_price_list <- priceListHistory
 
 - id <- 
-- name
+- name <-
 - markup <-
 
 #### product_price_list_item <- priceListHistory
