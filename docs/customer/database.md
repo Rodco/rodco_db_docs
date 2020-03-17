@@ -29,6 +29,7 @@ Retail and Wholesale customers
 - tags
 - price_lists
 - api_source [*]
+- email_domain
 
 #### Customer_segment:
 
@@ -63,3 +64,23 @@ Use in customers that belong to a larger commercial group and must be counted as
 - id
 - name [*]
 - api_source [*]
+
+#### Contact
+- id
+- name
+- active
+- identification
+- email
+- mobile
+- address
+- role
+- description
+- birthday
+- tags
+- is_owner
+- brands
+- bounce
+- last_email_status
+- last_email
+- last_email_at
+- customer_id

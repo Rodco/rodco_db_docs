@@ -41,3 +41,23 @@
  
 - id <- id
 - name <- name 
+
+#### Contact
+- id <- id
+- name <- name
+- active <- activo
+- identification <- cedula
+- email <- email
+- mobile <- mobile
+- address <- direccion
+- role <- rol
+- description <- descripcion
+- birthday <- fechaNacimiento
+- tags <- tags
+- is_owner <- propietario
+- brands <- marcas
+- bounce <- bounce
+- last_email_status <- esteadoUltimoEmail
+- last_email <- ultimoEmail
+- last_email_at <- fechaUltimoEmail
+- customer_id <- clienteId
