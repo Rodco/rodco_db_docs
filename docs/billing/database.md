@@ -54,7 +54,7 @@
 - amount [*] ( > 0 )
 - discount_rate [*] (>= 0 && <= 100)
 - product_tax_id [*]
-- api_source [*]
+
 
 #### sales_payment:
 
@@ -74,7 +74,7 @@
 - confirmed_by_user_id
 - deposited_in_bank_id [*]
 - items_json
-- api_source [*]
+
 - total [*]
 - payment_form
 - payment_reference
@@ -87,7 +87,7 @@
 - sales_credit_note_id
 - sales_debit_note_id
 - total [*] ( > 0)
-- api_source [*]
+
 
 #### sales_payment_reversal:
 
@@ -107,7 +107,7 @@
 - sourced_from_bank_id [*]
 - items_json
 - total [*] (> 0)
-- api_source [*]
+
 - payment_form
 - payment_reference
 
@@ -119,5 +119,5 @@
 - sales_credit_note_id
 - sales_debit_note_id
 - total [*] (> 0)
-- api_source [*]
+
 - product_tax_id

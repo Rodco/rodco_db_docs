@@ -1,14 +1,3 @@
-# electronic_document_log
-
-Table
-document_id [R,F]
-type [R,F]
-code [R,F]
-status [R,F] {printed, registered, validated, notified}
-
-Actions
-Retry
-Void
 
 # product_price_list:
 
@@ -55,31 +44,6 @@ Actions
 Archive
 Turn into Order
 
-# Sales Invoice
-
-- table
-
-  - number [R,F]
-  - readable_number
-  - applied_at [R,F]
-  - credit_term [R,F]
-  - customer_id [R,F]
-  - customer_rep_id [R,F]
-  - pdf_url [R,F]
-  - currency [R,F]
-  - total [R,F]
-  - balance [R,F]
-
-Sales invoices should dropdown and display in accordion the list of sales_invoice_items.
-
-Sales_Invoice_Items should have checkboxes or numeric inputs used to insert the amount of items to be returned. Max value of input should be the amount of sales_invoice_items.
-
-- Actions
-  - Resend
-    - send sales_invoice_id to /sales_invoice/resend
-  - Return
-    - send sales_invoice_items id's and amounts to /sales_invoice/return
-
 # Order
 
 - Table:
@@ -97,14 +61,11 @@ Sales_Invoice_Items should have checkboxes or numeric inputs used to insert the 
   - currency [R,F,C*]
   - exchange_rate [R,F,C*]
   - shipping_date [R,F,C]
-  - order_items_json
+  - items_json
   - tax_exception_json
   - tax_exoneration_json
   - sales_invoce_id
   - quote_id
-  - customer_override_type
-  - customer_override_identification
-  - customer_override_email_for_invoce
   - total [R,F]
   - requires_office_approval [R,F]
   - approved_by_office_user_id
@@ -113,21 +74,22 @@ Sales_Invoice_Items should have checkboxes or numeric inputs used to insert the 
   - replaces_sales_invoce_id
   - description [R,F,C*]
   - origin [R,F,C*]
+  - transport_id [R,F,C*]
+
 
 Create
 
-When customer does no exist, there must be the way to quickly create within a Modal. Such created customers only require Name, Province and Phone, Identification, Identification_Type and invoice_email.
+When customer does no exist, there must be the way to quickly create in the same view. Such created customers only require Name, Province and Phone, Identification and email_for_invoice.
 
 - Actions
-
-  - Approve
-
-    - if requires_office_approval
-      - must have approved_by_billing_user_id
-      - archived=true must have approved_by_office_user_id
-    - must have approved_by_billing_user_id
-    - must have items in it's JSON
-    - set archived=true
-
-  - Duplicate
+  - Apply - Everybody
+  - Approve - Billing Executives
+  - Hold  - Billing Executives
+  - Route - Sales Executives
+  - Print - Sales Executives
+  - Duplicate - Sales Executives
     - send order id to order/duplicate
+
+
+
+

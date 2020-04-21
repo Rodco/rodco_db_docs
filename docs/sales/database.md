@@ -1,19 +1,11 @@
-#### electronic_document_log
-
-- id
-- document_id [*]
-- type [*]
-- code [*]
-- status [*]
-- response [*]
-- api_source [*]
+ 
 
 #### product_price_list:
 
 - id
 - name [*]
 - markup [*]
-- api_source [*]
+
 
 #### product_price_list_item:
 
@@ -22,7 +14,7 @@
 - markup [*]
 - price_type [*] {markup}
 - product_price_list_id [*]
-- api_source [*]
+
 
 #### quote:
 
@@ -51,7 +43,8 @@
 - approved_by_office_at
 - description
 - origin [*]
-- api_source [*]
+- transport_id [*]
+
 
 #### order:
 
@@ -87,7 +80,9 @@
 - description
 - origin [*]
 - archived
-- api_source [*]
+- transport_id [*]
+
+
 
 #### sales_invoce:
 
@@ -135,7 +130,7 @@
 - payment_form [*]
 - payment_status
 - items_json
-- api_source [*]
+
 
 #### sales_invoce_item:
 
@@ -153,4 +148,4 @@
 - product_cost_id [*]
 - discount_reason
 - amount_returned {0}
-- api_source [*]
+

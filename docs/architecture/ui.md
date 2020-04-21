@@ -1,13 +1,5 @@
-Full javascript, no type-script
-Maintainable code - following a defined pattern/architecture that we agree upon
-
-Important Features
-Graphql subscriptions to update list on backend changes
-No object with archived=true can be updated or deleted
-Easily adjustable layouts, forms, tables, filters, actions ( react-admin Docs patterns )
-A notification components is importante to subscribe to async_notifications and show new notifications for user
-I18n
-
-
-Every create and update must set the field api_source=UI. Create is optional, but update is required. If this is a problem we must figure out how to do it in triggers.
-
+R=Read sale en la tabla
+F= Filterable
+C = Create
+C* =Create required
+U= not available in create only un update

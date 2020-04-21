@@ -22,13 +22,7 @@ name
 # product_type:
 id
 name
-
-# product_type_category:
-id
-name
-product_type_id
-
-
+ 
 # packing_list:
 id
 sales_invoce_id
@@ -48,29 +42,7 @@ packing_list_id
 product_id
 amount
 
-
-# product_warehouse:
-id
-name
-description
-
-# product_warehouse_item:
-id
-product_warehouse_id
-product_id
-inventory
-
-# product_warehouse_transfer:
-on archived =true
-create a product_warehouse_transfer_item for each entry in items
-
-
-# product_warehouse_transfer_item:
-Id
-product_warehouse_transfer_id
-product_id
-amount
-
+ 
 # truck:
 id
 name

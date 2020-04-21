@@ -4,7 +4,7 @@
   - [Getting Started](/)
 
 * Architecture
-
+  - [features](/architecture/features.md)
   - [backend](/architecture/backend.md)
   - [ui](/architecture/ui.md)
   - [priceLists](/architecture/priceLists.md)
@@ -12,9 +12,6 @@
 
 * Model
 
-  - Accounting
-    - [data model](/accounting/database.md)
-    - [migrate map](/accounting/migration.md)
   * Customer
     - [data model](/customer/database.md)
     - [migrate map](/customer/migration.md)
@@ -36,14 +33,8 @@
   * Settings
     - [data model](/settings/database.md)
     - [migrate map](/settings/migration.md)
-  * Managment
 
-    - [data model](/managment/database.md)
-    - [process](/managment/process.md)
-    - [permissions](/managment/permissions.md)
-    - [ui](/managment/ui.md)
 
 - UI Components
   - [Product Price Selector](/components/productPriceSelector.md)
   - [Product Quantity Selector](/components/productAmountSelector.md)
-  - [Sales Invoice Selector](/components/salesInvoicePaymentSelector)

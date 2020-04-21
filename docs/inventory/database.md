@@ -8,16 +8,17 @@ Trigger:
 - name [*]
 - product_cost_id
 - product_brand_id [*]
-- product_type_category_id [*]
+- product_type_id [*]
 - unit [*]
 - presentation [*]
 - code [*]
-- product_tax_id [*]
 - description [*]
 - image_url
 - comision_rate [*]
-- product_cost_as_price_id
-- api_source [*]
+- price
+- cost
+- inventory
+
 - discount_rate
 - short_code
 
@@ -25,20 +26,15 @@ Trigger:
 
 - id
 - name [*]
-- api_source [*]
+
 
 # product_type:
 
 - id
 - name [*]
-- api_source [*]
 
-# product_type_category:
+ 
 
-- id
-- name [*]
-- product_type_id [*]
-- api_source [*]
 
 # packing_list:
 
@@ -53,7 +49,7 @@ Trigger:
 - received_by_signature
 - status (draft)
 - archived
-- api_source [*]
+
 - shipment_cost
 
 # packing_list_item:
@@ -62,45 +58,8 @@ Trigger:
 - packing_list_id [*]
 - product_id [*]
 - amount [*]
-- api_source [*]
 
-# product_warehouse:
-
-- id
-- name [*]
-- description [*]
-- api_source [*]
-
-# product_warehouse_item:
-
-- id
-- product_warehouse_id [*]
-- product_id [*]
-- inventory [*] {0} (>0)
-- api_source [*]
-
-#### product_warehouse_transfer:
-
-- id
-- created_at
-- applied_at
-- status (draft)
-- archived
-- approved_by_user_id
-- created_by_user_id [*]
-- reason_for_transfer [*]
-- destination_warehouse_id [*]
-- source_warehouse_id
-- api_source [*]
-- items_json
-
-#### product_warehouse_transfer_item:
-
-- Id
-- product_warehouse_transfer_id [*]
-- product_id [*]
-- amount [* ] { > 0}
-- api_source [*]
+  
 
 #### truck:
 
@@ -109,7 +68,7 @@ Trigger:
 - license_plate [*]
 - brand
 - model
-- api_source [*]
+
 
 #### shipping_route:
 
@@ -122,7 +81,7 @@ Trigger:
 - assistant_user_id [*]
 - status (draft)
 - archived
-- api_source [*]
+
 
 #### product_price_list_customer
 
@@ -130,7 +89,7 @@ Trigger:
 - product_price_list_id [*]
 - customer_id [*]
 - created_at
-- api_source [*]
+
 
 #### product_purchase:
 - id
@@ -143,35 +102,4 @@ Trigger:
 - created_by_user_id
 - reference
 - items_json
-
-#### product_purchase_item:
-
-- id
-- product_id [*]
-- amount [*] >0
-- cost [*] >0
-- api_source [*]
-
-#### product_return:
-- id
-- created_at
-- updated_at
-- status
-- applied_at
-- archived
-- approved_by_user_id
-- created_by_user_id
-- reference
-
-#### product_return_item
-
-- id
-- product_id [*]
-- amount [*] >0
-- price [*] >0
-- discount [*] >=0
-- tax [*] >=0
-- customer_id [*]
-- customer_rep_id [*]
-- api_source [*]
-- cost (edited) 
+  
