@@ -1,5 +1,5 @@
-R=Read sale en la tabla
-F= Filterable
-C = Create
-C* =Create required
-U= not available in create only un update
+* R=Read display in table
+* F= Filterable
+* C = Create
+* C* =Create required
+* U= not available in create only un update
