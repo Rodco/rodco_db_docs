@@ -8,6 +8,7 @@ The system consists of Progressive Web App based on REACT-ADMIN with a NODEJS Ap
 
 We have 3 environments
 ##### UI
+ Repo: [https://github.com/Rodco/rodco-admin-ui](Repo)
 * In AWS S3 with Cloudfront
 - development: localhost:3000
 - staging: http://admin-staging.rodcocr.com/
@@ -18,6 +19,7 @@ Run with staging: npm start
 Run with local API: npm run dev
 
 ##### API
+Repo: [https://github.com/Rodco/hasura-rodco-api](Repo)
 In Heroku
 - development: localhost:4000
 - staging: https://hasura-rodco-api-staging.herokuapp.com/
@@ -31,8 +33,8 @@ mocha ./test/integration
 ##### DB
 Postgres in Heroku
 - development: localhost
-- staging: dbs.rodcocr.com
-- production: dbp.rodcocr.com
+- staging: HEROKU ENV VAR
+- production: HEROKU ENV VAR
 
 Setup in API REPO:
 - CREATE_DATABASE test1
