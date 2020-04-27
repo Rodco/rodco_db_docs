@@ -37,9 +37,8 @@ Production:
 ## Setup DB with docker
 
 - docker-compose up -d
-- docker ps //get CONTAINER_NAME from postgres process
 
-* docker exec -i CONTAINER_NAME pg_restore --verbose --clean --no-acl --no-owner -U development -d development < latest.dump
+* docker exec -i postgres_container_rodco pg_restore --verbose --clean --no-acl --no-owner -U development -d development < latest.dump
 
 ## Install and Run
 
