@@ -1,11 +1,8 @@
- 
-
 #### product_price_list:
 
 - id
 - name [*]
 - markup [*]
-
 
 #### product_price_list_item:
 
@@ -14,7 +11,6 @@
 - markup [*]
 - price_type [*] {markup}
 - product_price_list_id [*]
-
 
 #### quote:
 
@@ -44,7 +40,6 @@
 - description
 - origin [*]
 - transport_id [*]
-
 
 #### order:
 
@@ -81,8 +76,7 @@
 - origin [*]
 - archived
 - transport_id [*]
-
-
+- created_by_user_id [*]
 
 #### sales_invoce:
 
@@ -131,7 +125,6 @@
 - payment_status
 - items_json
 
-
 #### sales_invoce_item:
 
 - Id
@@ -148,4 +141,3 @@
 - product_cost_id [*]
 - discount_reason
 - amount_returned {0}
-
