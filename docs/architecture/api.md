@@ -18,33 +18,32 @@ The Database and API are based on Postgres, Knex and Express.
 
 # Environments
 
-Local: localhost:5000
-Staging:
-Production:
+- Local: localhost:5000
+- Staging:
+- Production:
 
 # Getting Started
 
 ## Install Heroku CLI
 
-    * https://devcenter.heroku.com/articles/heroku-cli
-    * $ heroku login
+- https://devcenter.heroku.com/articles/heroku-cli
+- \$ heroku login
 
 ## Download Staging DB
 
-    * $ heroku pg:backups:capture --app hasura-rodco-api-staging
-    * $ heroku pg:backup:download --app hasura-rodco-api-staging
+- \$ heroku pg:backups:capture --app hasura-rodco-api-staging
+- \$ heroku pg:backup:download --app hasura-rodco-api-staging
 
 ## Setup DB with docker
 
-- docker-compose up -d
+- \$ docker-compose up -d
+- \$ docker exec -i postgres_container_rodco pg_restore --verbose --clean --no-acl --no-owner -U development -d development < latest.dump
 
-* docker exec -i postgres_container_rodco pg_restore --verbose --clean --no-acl --no-owner -U development -d development < latest.dump
+## Clone, install and run
 
-## Install and Run
-
-- Clone Repo
-- npm install .
-- npm start
+- \$ git clone git@github.com:Rodco/hasura-rodco-api.git
+- \$ npm install .
+- \$ npm start
 
 ## Usage
 
@@ -72,7 +71,8 @@ Rest "paths" or "actions" are based on [React-Admin Rest Api](https://marmelab.c
 
 - method: POST
 - route: /getList
-- body: { pagination: { page: {int} , perPage: {int} }, sort: { field: {string}, order: {string} }, filter: {Object} }
+- body: `{ pagination: { page: {int} , perPage: {int} }, sort: { field: {string}, order: {string} }, filter: {Object} }`
+
 - returns: {results: [{Object}], count: {int}}
 
 ## getMany
@@ -137,3 +137,7 @@ Every request, except for login requests. Require an Autorization Header.
 
 - Accept: "application/json"
 - Authorization: `Bearer ${token}`
+
+```
+
+```
