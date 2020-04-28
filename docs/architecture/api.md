@@ -43,6 +43,7 @@ The Database and API are based on Postgres, Knex and Express.
 ## install, migrate and run
 
 - \$ `npm install .`
+- rename .env.example to .env `NODE_ENV=development && DATABASE_URL=postgres://development:development@localhost:5433/development`
 - \$ `npm run migrate` -> always run this command after downloading db data
 - \$ `npm start`
 
