@@ -31,19 +31,25 @@ The Database and API are based on Postgres, Knex and Express.
 
 ## Download Staging DB
 
-- \$ heroku pg:backups:capture --app hasura-rodco-api-staging
-- \$ heroku pg:backup:download --app hasura-rodco-api-staging
+- \$ `heroku pg:backups:capture --app hasura-rodco-api-staging`
+- \$ `heroku pg:backup:download --app hasura-rodco-api-staging`
 
 ## Setup DB with docker
 
-- \$ docker-compose up -d
-- \$ docker exec -i postgres_container_rodco pg_restore --verbose --clean --no-acl --no-owner -U development -d development < latest.dump
+- \$ `docker-compose up -d`
+- \$ `docker exec -i postgres_container_rodco pg_restore --verbose --clean --no-acl --no-owner -U development -d development < latest.dump`
 
 ## Clone, install and run
 
 - \$ git clone git@github.com:Rodco/hasura-rodco-api.git
 - \$ npm install .
 - \$ npm start
+
+## Important Points
+
+### Update
+
+When updating an object only send the data that is changing. Current merging strategy is simple {...current, ...incomming}. If a an use case requires a change to this merging strategy it's possible using specific route overrrides.
 
 ## Usage
 
