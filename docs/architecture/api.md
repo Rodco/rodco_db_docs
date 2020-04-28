@@ -29,25 +29,26 @@ The Database and API are based on Postgres, Knex and Express.
 - https://devcenter.heroku.com/articles/heroku-cli
 - \$ heroku login
 
-## Download Staging DB
-
-- \$ `heroku pg:backups:capture --app hasura-rodco-api-staging`
-- \$ `heroku pg:backups:download --app hasura-rodco-api-staging`
-
 ## Start postgres with docker and download staging data
 
 - \$ `git clone git@github.com:Rodco/hasura-rodco-api.git`
+- \$ `cd hasura-rodco-api`
 - \$ `docker-compose up -d`
+
+## Download Staging DB and restore db
+
+- \$ `heroku pg:backups:capture --app hasura-rodco-api-staging`
+- \$ `heroku pg:backups:download --app hasura-rodco-api-staging`
 - \$ `docker exec -i postgres_container_rodco pg_restore --verbose --clean --no-acl --no-owner -U development -d development < latest.dump`
 
 ## install, migrate and run
 
 - \$ `npm install .`
-- rename .env.example to .env `NODE_ENV=development && DATABASE_URL=postgres://development:development@localhost:5433/development`
+- rename .env.example to .env to set: `NODE_ENV=development && DATABASE_URL=postgres://development:development@localhost:5433/development`
 - \$ `npm run migrate` -> always run this command after downloading db data
 - \$ `npm start`
 
-## Refresh Db data from staging
+## Refresh Db data from staging ( in hasura-rodco-api folder )
 
 - \$ `rm ./latest.dump`
 - \$ `heroku pg:backups:capture --app hasura-rodco-api-staging`
