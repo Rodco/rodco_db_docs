@@ -32,16 +32,16 @@ The Database and API are based on Postgres, Knex and Express.
 ## Download Staging DB
 
 - \$ `heroku pg:backups:capture --app hasura-rodco-api-staging`
-- \$ `heroku pg:backup:download --app hasura-rodco-api-staging`
+- \$ `heroku pg:backups:download --app hasura-rodco-api-staging`
 
 ## Start postgres with docker and download staging data
 
+- \$ `git clone git@github.com:Rodco/hasura-rodco-api.git`
 - \$ `docker-compose up -d`
 - \$ `docker exec -i postgres_container_rodco pg_restore --verbose --clean --no-acl --no-owner -U development -d development < latest.dump`
 
-## Clone, install and run
+## install, migrate and run
 
-- \$ `git clone git@github.com:Rodco/hasura-rodco-api.git`
 - \$ `npm install .`
 - \$ `npm run migrate` -> always run this command after downloading db data
 - \$ `npm start`
