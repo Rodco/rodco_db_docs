@@ -47,6 +47,13 @@ The Database and API are based on Postgres, Knex and Express.
 - \$ `npm run migrate` -> always run this command after downloading db data
 - \$ `npm start`
 
+## Refresh Db data from staging
+
+- \$ `rm ./latest.dump`
+- \$ `heroku pg:backups:capture --app hasura-rodco-api-staging`
+- \$ `heroku pg:backups:download --app hasura-rodco-api-staging`
+- \$ `docker exec -i postgres_container_rodco pg_restore --verbose --clean --no-acl --no-owner -U development -d development < latest.dump`
+
 ## Important Points
 
 ### Update
