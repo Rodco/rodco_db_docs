@@ -19,47 +19,32 @@ The Database and API are based on Postgres, Knex and Express.
 # Environments
 
 - Local: localhost:5000
-- Staging:
-- Production:
-
-# Getting Started
-
-## Install Heroku CLI
-
-- https://devcenter.heroku.com/articles/heroku-cli
-- \$ heroku login
-
-## Start postgres with docker and download staging data
-
-- \$ `git clone git@github.com:Rodco/hasura-rodco-api.git`
-- \$ `cd hasura-rodco-api`
-- \$ `docker-compose up -d`
-
-## Download Staging DB and restore db
-
-- \$ `heroku pg:backups:capture --app hasura-rodco-api-staging`
-- \$ `heroku pg:backups:download --app hasura-rodco-api-staging`
-- \$ `docker exec -i postgres_container_rodco pg_restore --verbose --clean --no-acl --no-owner -U development -d development < latest.dump`
-
-## install, migrate and run
-
-- \$ `npm install .`
-- rename .env.example to .env to set: `NODE_ENV=development && DATABASE_URL=postgres://development:development@localhost:5433/development`
-- \$ `npm run migrate` -> always run this command after downloading db data
-- \$ `npm start`
-
-## Refresh Db data from staging ( in hasura-rodco-api folder )
-
-- \$ `rm ./latest.dump`
-- \$ `heroku pg:backups:capture --app hasura-rodco-api-staging`
-- \$ `heroku pg:backups:download --app hasura-rodco-api-staging`
-- \$ `docker exec -i postgres_container_rodco pg_restore --verbose --clean --no-acl --no-owner -U development -d development < latest.dump`
+- Staging: hasura-rodco-api-staging.herokuapp.com
+- Production: hasura-rodco-api-production.herokuapp.com
 
 ## Important Points
 
 ### Update
 
 When updating an object only send the data that is changing. Current merging strategy is simple {...current, ...incomming}. If a an use case requires a change to this merging strategy it's possible using specific route overrrides.
+
+### Complex Filters
+
+For Filters that do not use the equal `COL=VALUE` operation, we added a simple deviation from the standard that appends `,` + `OPERATION_NAME` to the column being filtered. To use this feature simple add the suffix of `comma` + the PGSQL operation.
+
+For example for filtering by an array of values use: `{"status,IN" :[ {String},{String},{String} ] }`
+
+If the value is an array, by default we use the IN Operand: `{"status" :[ {String},{String},{String} ] }`
+
+For example for filtering > use: `{"total,>" : 100 }`
+
+For example for filtering >= use: `{"total,>=" : 100 }`
+
+For range use the between operand >= use: `{"total,between=" : [100,1000] }`
+
+To use the pg LIKE or ILIKE operation there are two options:
+
+If the value of any string filter contains a `%`, then the operation is switched to ilike. Otherwise use the operation as usual for example: {"name,ilike": "rob"}. This will filter name using ilike and automatically wrap the string rob like this `%rob%`.
 
 ## Usage
 
