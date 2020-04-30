@@ -121,7 +121,7 @@ Not Implemented
 ## custom actions
 
 - method: post
-- route /actions/{:action}
+- route /action/{:action}
 - body: {metadata: {Object}, id: {int}}
 - returns: {Object}
 
